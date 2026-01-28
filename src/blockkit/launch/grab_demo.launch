@@ -1,0 +1,4 @@
+<launch>
+   <!-- <node pkg="vi_grab" name="msg_pub" type="pub.py" cwd="node" output="screen" /> -->
+   <node pkg="vi_grab" name="object_catch" type="vision_grab.py" cwd="node" output="screen" />
+</launch>

@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/map_msgs/lib/pkgconfig/map_msgs.pc

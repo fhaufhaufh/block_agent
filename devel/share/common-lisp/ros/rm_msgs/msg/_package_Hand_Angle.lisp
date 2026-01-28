@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_Hand_Angle.lisp

@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/Pos_Teach.l

@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/Tool_IO_State.js

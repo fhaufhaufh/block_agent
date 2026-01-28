@@ -1,0 +1,6 @@
+devel_space: /home/ytm/ytm_space/devel
+install: false
+install_space: /home/ytm/ytm_space/install
+profile: default
+source_space: /home/ytm/ytm_space/src
+workspace: /home/ytm/ytm_space

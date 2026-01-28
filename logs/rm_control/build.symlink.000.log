@@ -1,0 +1,4 @@
+Symlinking /home/ytm/ytm_space/devel/share/rm_control/cmake/rm_controlConfig.cmake
+Symlinking /home/ytm/ytm_space/devel/share/rm_control/cmake/rm_controlConfig-version.cmake
+Symlinking /home/ytm/ytm_space/devel/lib/rm_control/rm_control
+Symlinking /home/ytm/ytm_space/devel/lib/pkgconfig/rm_control.pc

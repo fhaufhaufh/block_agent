@@ -1,0 +1,3 @@
+<launch>
+   <node pkg="vi_grab" name="object_detect" type="vi_catch_yolov11.py" cwd="node" output="screen" />
+</launch>

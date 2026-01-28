@@ -1,0 +1,8 @@
+prefix=/home/ytm/ytm_space/devel/.private/rm_demo
+
+Name: rm_demo
+Description: Description of rm_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

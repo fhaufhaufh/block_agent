@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/map_msgs/share/gennodejs/ros/map_msgs/_index.js

@@ -1,0 +1,8 @@
+prefix=/home/ytm/ytm_space/install
+
+Name: rml_63_6f_moveit_config
+Description: Description of rml_63_6f_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

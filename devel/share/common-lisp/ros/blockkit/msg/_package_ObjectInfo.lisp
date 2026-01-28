@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/blockkit/share/common-lisp/ros/blockkit/msg/_package_ObjectInfo.lisp

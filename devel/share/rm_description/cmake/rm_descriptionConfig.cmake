@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/rm_description/share/rm_description/cmake/rm_descriptionConfig.cmake

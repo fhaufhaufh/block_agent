@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/rm_demo/lib/pkgconfig/rm_demo.pc

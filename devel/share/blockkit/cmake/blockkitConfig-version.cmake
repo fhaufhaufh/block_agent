@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/blockkit/share/blockkit/cmake/blockkitConfig-version.cmake

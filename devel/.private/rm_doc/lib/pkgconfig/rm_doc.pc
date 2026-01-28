@@ -1,0 +1,8 @@
+prefix=/home/ytm/ytm_space/devel/.private/rm_doc
+
+Name: rm_doc
+Description: Description of rm_doc
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

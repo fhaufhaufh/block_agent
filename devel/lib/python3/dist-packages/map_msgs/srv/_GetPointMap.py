@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/map_msgs/lib/python3/dist-packages/map_msgs/srv/_GetPointMap.py

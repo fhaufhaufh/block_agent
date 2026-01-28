@@ -1,0 +1,1 @@
+/home/ytm/ytm_space/devel/.private/move_base_msgs/share/roseus/ros/move_base_msgs/msg/MoveBaseResult.l
