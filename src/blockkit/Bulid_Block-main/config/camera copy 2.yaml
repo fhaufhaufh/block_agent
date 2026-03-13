@@ -1,0 +1,47 @@
+# Camera and detection configuration used by test_grasp.py
+# 请根据实际相机标定结果替换 camera_extrinsics.matrix 和 model_path
+
+detection:
+  # 置信度阈值，低于该值的检测会被忽略
+  confidence_threshold: 0.6
+  # YOLO 模型路径（相对或绝对），例如 weights/best.pt 或 yolov8n.pt
+  model_path: "best.pt"
+
+display:
+  # OpenCV 窗口名
+  window_name: "Detection"
+
+# 相机外参：4x4 齐次变换矩阵（camera -> robot_base），示例为单位矩阵
+# 请在实际部署时用相机-基座标定得到的矩阵替换
+camera_extrinsics:
+  matrix:
+    - [ 0.01053721, -0.42699052,  0.90419470, -0.13760350]
+    - [-0.99881710,  0.03843213,  0.02978883,  0.03339664]
+    - [-0.04746968, -0.90343902, -0.42608047,  0.11797660]
+    - [0.0, 0.0, 0.0, 1.0]
+camera_intrinsics:
+  matrix:
+    - [905.07126501,   0.        , 639.13174962]
+    - [  0.        , 904.84012287, 365.39336838]
+    - [  0.        ,   0.        ,   1.        ]
+camera_streams:
+  color:
+    # 分辨率宽度（整数）
+    width: 640
+    # 分辨率高度（整数）
+    height: 480
+    # 格式：使用 RealSense 支持的格式字符串（例如 bgr8 或 rgb8）
+    format: bgr8
+    # 帧率
+    fps: 30
+
+  depth:
+    width: 848
+    height: 480
+    # 深度格式通常为 z16
+    format: z16
+    fps: 30
+
+# 深度处理参数（示例：对深度区域进行简单的平滑核尺寸）
+depth_processing:
+  kernel_size: 5

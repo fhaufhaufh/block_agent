@@ -1,1 +1,0 @@
-/home/ytm/ytm_space/devel/.private/blockkit/lib/blockkit/vi_catch_yolov11.py

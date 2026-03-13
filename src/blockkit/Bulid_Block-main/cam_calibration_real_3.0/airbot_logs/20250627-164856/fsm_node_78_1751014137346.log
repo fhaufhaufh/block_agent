@@ -1,0 +1,67 @@
+[INFO] [1751014137.346734035] [identify_product]: Product info file not found or empty, reading from device
+[INFO] [1751014137.448077721] [identify_product]: No error
+[INFO] [1751014137.448834248] [init]: ProductInfo: product_type: play, sn: PZ27C02404000166, is_sim: 0, interfaces: [can0, ], arm_types: [play, ], eef_types: [G2, ]
+[INFO] [1751014137.567774196] [PZ27C02404000166.fsm]: product_type: play
+[INFO] [1751014137.569864509] [PZ27C02404000166.fsm]: ros2 launch process created
+[WARN] [1751014139.135809085] [PZ27C02404000166.fsm]: Arm controller not ready: forward_position_controller gpio_controller gravity_compensation_controller id_controller joint_state_broadcaster robot_tracking_controller 
+[INFO] [1751014139.499037463] [PZ27C02404000166.fsm]: All arm controllers are ready
+[INFO] [1751014139.499706232] [PZ27C02404000166.fsm]: All eef controllers are ready
+[INFO] [1751014139.513713659] [PZ27C02404000166.fsm]: Transition configure for sdk_server succeeded
+[INFO] [1751014139.518313253] [PZ27C02404000166.fsm]: Transition activate for sdk_server succeeded
+[INFO] [1751014139.544094535] [PZ27C02404000166.fsm]: Configured controller gpio_controller
+[INFO] [1751014139.550340587] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1751014139.550394192] [PZ27C02404000166.fsm]: on change_led_color to 15
+[INFO] [1751014140.550532865] [PZ27C02404000166.fsm]: on change_led_color to 19
+[INFO] [1751014141.551074105] [PZ27C02404000166.fsm]: Waiting for coefficients ...
+[INFO] [1751014141.652571375] [PZ27C02404000166.fsm]: Gravity compensation coefficients: 0.6 0.6 0.6 1.31617 1.44006 1.5 
+[INFO] [1751014141.665088431] [PZ27C02404000166.fsm]: hardware '_led' state set to active
+[INFO] [1751014141.665141202] [PZ27C02404000166.fsm]: hardware '_button' state set to active
+[INFO] [1751014141.808931138] [PZ27C02404000166.fsm]: hardware 'joint6' state set to active
+[INFO] [1751014141.952060891] [PZ27C02404000166.fsm]: hardware 'joint5' state set to active
+[INFO] [1751014142.202922494] [PZ27C02404000166.fsm]: hardware 'joint3' state set to active
+[INFO] [1751014142.449731790] [PZ27C02404000166.fsm]: hardware 'joint2' state set to active
+[INFO] [1751014142.594079616] [PZ27C02404000166.fsm]: hardware 'eef_gripper_joint' state set to active
+[INFO] [1751014142.737352709] [PZ27C02404000166.fsm]: hardware 'joint4' state set to active
+[INFO] [1751014142.984867887] [PZ27C02404000166.fsm]: hardware 'joint1' state set to active
+[INFO] [1751014142.998241934] [PZ27C02404000166.fsm]: Configured controller forward_position_controller
+[INFO] [1751014143.002212644] [PZ27C02404000166.fsm]: Configured controller gravity_compensation_controller
+[INFO] [1751014143.010084434] [PZ27C02404000166.fsm]: Configured controller id_controller
+[INFO] [1751014143.014190419] [PZ27C02404000166.fsm]: Configured controller joint_state_broadcaster
+[INFO] [1751014143.018227022] [PZ27C02404000166.fsm]: Configured controller joint_trajectory_position_controller
+[INFO] [1751014143.030189142] [PZ27C02404000166.fsm]: Configured controller robot_tracking_controller
+[INFO] [1751014143.034135787] [PZ27C02404000166.fsm]: Configured controller gripper_mapping_controller
+[INFO] [1751014143.038125086] [PZ27C02404000166.fsm]: Configured controller end_effector_position_controller
+[INFO] [1751014143.046129126] [PZ27C02404000166.fsm]: Activated controller gripper_mapping_controller
+[INFO] [1751014143.054107631] [PZ27C02404000166.fsm]: Activated controller end_effector_position_controller
+[INFO] [1751014143.062075658] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1751014143.062113128] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1751014143.062121549] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1751014143.062128532] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[INFO] [1751014143.062139253] [PZ27C02404000166.fsm]: on change_led_color to 20
+[WARN] [1751014146.983813393] [PZ27C02404000166.fsm]: Control mode: 90
+[INFO] [1751014146.990210709] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1751014146.990237560] [PZ27C02404000166.fsm]: Activated controller gravity_compensation_controller
+[INFO] [1751014146.990244502] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1751014146.990250882] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[WARN] [1751015065.264881708] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1751015065.270241430] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1751015065.270266272] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1751015065.270271227] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1751015065.270278827] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[INFO] [1751015375.546206719] [PZ27C02404000166.fsm]: Base button: 2, End button: 0
+[INFO] [1751015375.607201398] [PZ27C02404000166.fsm]: App [app](record_replay_app/record_replay_app::RecordReplayApp) loaded successfully
+[INFO] [1751015375.607240118] [PZ27C02404000166.fsm]: on change_led_color to 69
+[INFO] [1751015376.609750519] [PZ27C02404000166.fsm]: App /PZ27C02404000166/app parameters check pass
+[WARN] [1751015376.621671019] [PZ27C02404000166.fsm]: No initial joint position provided
+[INFO] [1751015376.631010083] [PZ27C02404000166.fsm]: Activated controller forward_position_controller
+[INFO] [1751015376.631039938] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1751015376.631047347] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1751015376.631053796] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1751015376.670761719] [PZ27C02404000166.fsm]: Transition configure for /PZ27C02404000166/app succeeded
+[INFO] [1751015376.677861988] [PZ27C02404000166.fsm]: Transition activate for /PZ27C02404000166/app succeeded
+[INFO] [1751015376.679416940] [PZ27C02404000166.fsm]: App /PZ27C02404000166/app configured
+[INFO] [1751015376.681516683] [PZ27C02404000166.fsm]: on change_led_color to 21
+[INFO] [1751015514.558139977] [PZ27C02404000166.fsm]: Received signal 2
+[INFO] [1751015514.559171886] [PZ27C02404000166.fsm]: Transition deactivate for /PZ27C02404000166/app succeeded
+[INFO] [1751015514.560597397] [PZ27C02404000166.fsm]: Transition cleanup for /PZ27C02404000166/app succeeded
+[INFO] [1751015514.603653987] [PZ27C02404000166.fsm]: App [/PZ27C02404000166/app](record_replay_app/record_replay_app::RecordReplayApp) unloaded successfully

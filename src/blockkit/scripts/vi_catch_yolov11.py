@@ -71,33 +71,62 @@ if __name__ == '__main__':
             intr, depth_intrin, color_image, depth_image, aligned_depth_frame = get_aligned_images()
             if not depth_image.any() or not color_image.any():
                 continue
-            # 使用 YOLOv8 进行目标检测
+            # 使用 YOLOv8 OBB 进行目标检测（如果模型输出 obb，即 xywhr）
             results = model.predict(color_image, conf=0.5)
-            detected_boxes = results[0].boxes.xyxy  # 获取边界框坐标
-            data = results[0].boxes.data.cpu().tolist()
-            canvas = results[0].plot()
+            result = results[0]
+            canvas = result.plot()
 
-            for i, (row, box) in enumerate(zip(data, detected_boxes)):
-                id = int(row[5])
-                name = results[0].names[id]
-                x1, y1, x2, y2 = map(int, box)  # 获取边界框坐标
-                # 显示中心点坐标
-                ux = int((x1 + x2) / 2)
-                uy = int((y1 + y2) / 2)
-                dis, camera_coordinate = get_3d_camera_coordinate([ux, uy], aligned_depth_frame, depth_intrin) #得到中心点的深度值，当作距离
+            # 优先使用 obb 输出（xywhr: x_center, y_center, w, h, angle(rad)）
+            if hasattr(result, 'obb') and result.obb is not None:
+                obb = result.obb
+                boxes = obb.xywhr
+                for i, box in enumerate(boxes):
+                    x_center, y_center, w, h, angle_rad = box.cpu().numpy()
+                    cls_id = int(obb.cls[i].cpu().numpy()) if hasattr(obb, 'cls') else int(result.boxes.data[i][5])
+                    name = result.names[cls_id]
+                    ux = int(x_center)
+                    uy = int(y_center)
+                    # 获取深度与相机坐标
+                    dis, camera_coordinate = get_3d_camera_coordinate([ux, uy], aligned_depth_frame, depth_intrin)
 
-                formatted_camera_coordinate = f"({camera_coordinate[0]:.2f}, {camera_coordinate[1]:.2f},{camera_coordinate[2]:.2f})"
-                # 展示检测界面
-                cv2.circle(canvas, (ux, uy), 4, (255, 255, 255), 5)
-                cv2.putText(canvas, str(formatted_camera_coordinate), (ux + 20, uy + 10), 0, 1,
-                            [225, 255, 255], thickness=2, lineType=cv2.LINE_AA)
-                # ROS话题发送物体坐标
-                object_info_msg.object_class = str(name)
-                object_info_msg.x = float(camera_coordinate[0])
-                object_info_msg.y = float(camera_coordinate[1])
-                object_info_msg.z = float(camera_coordinate[2])
-                rospy.loginfo(object_info_msg)
-                object_pub.publish(object_info_msg)
+                    formatted_camera_coordinate = f"({camera_coordinate[0]:.2f}, {camera_coordinate[1]:.2f},{camera_coordinate[2]:.2f})"
+                    # 在窗口添加角度显示（角度转为度）
+                    angle_deg = float(angle_rad) * 180.0 / math.pi
+                    cv2.circle(canvas, (ux, uy), 4, (255, 255, 255), 5)
+                    cv2.putText(canvas, f"{formatted_camera_coordinate} {angle_deg:.1f}deg", (ux + 20, uy + 10), 0, 1,
+                                [225, 255, 255], thickness=2, lineType=cv2.LINE_AA)
+
+                    # ROS话题发送物体坐标及角度（角度以弧度发送）
+                    object_info_msg.object_class = str(name)
+                    object_info_msg.x = float(camera_coordinate[0])
+                    object_info_msg.y = float(camera_coordinate[1])
+                    object_info_msg.z = float(camera_coordinate[2])
+                    object_info_msg.angle = float(angle_rad)
+                    rospy.loginfo(object_info_msg)
+                    object_pub.publish(object_info_msg)
+            else:
+                # 回退到原始 axis-aligned bbox 输出
+                detected_boxes = result.boxes.xyxy
+                data = result.boxes.data.cpu().tolist()
+                for i, (row, box) in enumerate(zip(data, detected_boxes)):
+                    id = int(row[5])
+                    name = result.names[id]
+                    x1, y1, x2, y2 = map(int, box)
+                    ux = int((x1 + x2) / 2)
+                    uy = int((y1 + y2) / 2)
+                    dis, camera_coordinate = get_3d_camera_coordinate([ux, uy], aligned_depth_frame, depth_intrin)
+
+                    formatted_camera_coordinate = f"({camera_coordinate[0]:.2f}, {camera_coordinate[1]:.2f},{camera_coordinate[2]:.2f})"
+                    cv2.circle(canvas, (ux, uy), 4, (255, 255, 255), 5)
+                    cv2.putText(canvas, str(formatted_camera_coordinate), (ux + 20, uy + 10), 0, 1,
+                                [225, 255, 255], thickness=2, lineType=cv2.LINE_AA)
+                    object_info_msg.object_class = str(name)
+                    object_info_msg.x = float(camera_coordinate[0])
+                    object_info_msg.y = float(camera_coordinate[1])
+                    object_info_msg.z = float(camera_coordinate[2])
+                    object_info_msg.angle = 0.0
+                    rospy.loginfo(object_info_msg)
+                    object_pub.publish(object_info_msg)
 
             cv2.namedWindow('detection', flags=cv2.WINDOW_NORMAL |
                                                    cv2.WINDOW_KEEPRATIO | cv2.WINDOW_GUI_EXPANDED)

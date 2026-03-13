@@ -1,0 +1,150 @@
+[INFO] [1750924136.273329822] [identify_product]: Product info file not found or empty, reading from device
+[INFO] [1750924136.374382835] [identify_product]: No error
+[INFO] [1750924136.375094486] [init]: ProductInfo: product_type: play, sn: PZ27C02404000166, is_sim: 0, interfaces: [can0, ], arm_types: [play, ], eef_types: [G2, ]
+[INFO] [1750924136.490386505] [PZ27C02404000166.fsm]: product_type: play
+[INFO] [1750924136.492845219] [PZ27C02404000166.fsm]: ros2 launch process created
+[WARN] [1750924138.179236069] [PZ27C02404000166.fsm]: Arm controller not ready: forward_position_controller gpio_controller gravity_compensation_controller id_controller joint_state_broadcaster joint_trajectory_position_controller 
+[INFO] [1750924138.355148186] [PZ27C02404000166.fsm]: All arm controllers are ready
+[WARN] [1750924138.470936324] [PZ27C02404000166.fsm]: Eef controller not ready: 
+[INFO] [1750924138.473132366] [PZ27C02404000166.fsm]: All eef controllers are ready
+[INFO] [1750924138.489438294] [PZ27C02404000166.fsm]: Transition configure for sdk_server succeeded
+[INFO] [1750924138.491055256] [PZ27C02404000166.fsm]: Transition activate for sdk_server succeeded
+[INFO] [1750924138.506860939] [PZ27C02404000166.fsm]: Configured controller gpio_controller
+[INFO] [1750924138.526741286] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750924138.526805580] [PZ27C02404000166.fsm]: on change_led_color to 15
+[INFO] [1750924139.526952602] [PZ27C02404000166.fsm]: on change_led_color to 19
+[INFO] [1750924140.527329201] [PZ27C02404000166.fsm]: Waiting for coefficients ...
+[INFO] [1750924140.628943511] [PZ27C02404000166.fsm]: Gravity compensation coefficients: 0.6 0.6 0.6 1.31617 1.44006 1.5 
+[INFO] [1750924140.640132682] [PZ27C02404000166.fsm]: hardware '_led' state set to active
+[INFO] [1750924140.640220301] [PZ27C02404000166.fsm]: hardware '_button' state set to active
+[INFO] [1750924140.783792774] [PZ27C02404000166.fsm]: hardware 'joint6' state set to active
+[INFO] [1750924140.926822140] [PZ27C02404000166.fsm]: hardware 'joint5' state set to active
+[INFO] [1750924141.175675411] [PZ27C02404000166.fsm]: hardware 'joint3' state set to active
+[INFO] [1750924141.422346203] [PZ27C02404000166.fsm]: hardware 'joint2' state set to active
+[INFO] [1750924141.669829315] [PZ27C02404000166.fsm]: hardware 'eef_gripper_joint' state set to active
+[INFO] [1750924141.813285869] [PZ27C02404000166.fsm]: hardware 'joint4' state set to active
+[INFO] [1750924142.059943837] [PZ27C02404000166.fsm]: hardware 'joint1' state set to active
+[INFO] [1750924142.062607899] [PZ27C02404000166.fsm]: Configured controller forward_position_controller
+[INFO] [1750924142.066699510] [PZ27C02404000166.fsm]: Configured controller gravity_compensation_controller
+[INFO] [1750924142.074533187] [PZ27C02404000166.fsm]: Configured controller id_controller
+[INFO] [1750924142.078762298] [PZ27C02404000166.fsm]: Configured controller joint_state_broadcaster
+[INFO] [1750924142.082659527] [PZ27C02404000166.fsm]: Configured controller joint_trajectory_position_controller
+[INFO] [1750924142.090777805] [PZ27C02404000166.fsm]: Configured controller robot_tracking_controller
+[INFO] [1750924142.094674838] [PZ27C02404000166.fsm]: Configured controller gripper_mapping_controller
+[INFO] [1750924142.098743236] [PZ27C02404000166.fsm]: Configured controller end_effector_position_controller
+[INFO] [1750924142.106624152] [PZ27C02404000166.fsm]: Activated controller gripper_mapping_controller
+[INFO] [1750924142.114478807] [PZ27C02404000166.fsm]: Activated controller end_effector_position_controller
+[INFO] [1750924142.122637317] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750924142.122664353] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750924142.122678340] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750924142.122682907] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[INFO] [1750924142.122691098] [PZ27C02404000166.fsm]: on change_led_color to 20
+[WARN] [1750924348.724469074] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750924348.725189084] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750924348.725212219] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750924348.725219962] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750924348.725227451] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750924367.257470112] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750924367.258200398] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750924367.258220033] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750924367.258224793] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750924367.258228712] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750924463.492795665] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750924463.493639394] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750924463.493659854] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750924463.493665796] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750924463.493671425] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750925341.409713077] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750925341.410426793] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750925341.410447050] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750925341.410451428] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750925341.410455520] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750925493.138769089] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750925493.139444180] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750925493.139467045] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750925493.139472619] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750925493.139476528] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750925673.298843211] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750925673.299564531] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750925673.299588029] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750925673.299593182] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750925673.299599501] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750925761.378835671] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750925761.379537717] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750925761.379556851] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750925761.379562306] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750925761.379567133] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750928183.634086470] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750928183.645499635] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750928183.645536401] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750928183.645550644] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750928183.645556820] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750928646.602470131] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750928646.603329912] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750928646.603351012] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750928646.603355505] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750928646.603359405] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750929788.353705895] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750929788.355060602] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750929788.355090805] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750929788.355099884] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750929788.355105621] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750929810.473728933] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750929810.474508109] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750929810.474539085] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750929810.474546166] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750929810.474552087] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750929821.811468261] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750929821.822424215] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750929821.822455125] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750929821.822461580] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750929821.822467776] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750929835.100243438] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750929835.101000735] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750929835.101020724] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750929835.101025110] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750929835.101028747] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750929847.374869041] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750929847.375673937] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750929847.375698357] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750929847.375705510] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750929847.375711330] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750929857.895195404] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750929857.896004728] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750929857.896021771] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750929857.896025959] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750929857.896029887] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750931601.153316172] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750931601.154116336] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750931601.154140770] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750931601.154148323] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750931601.154154955] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750931754.880451709] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750931754.881329874] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750931754.881354941] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750931754.881360235] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750931754.881366122] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750932106.151767636] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750932106.152489524] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750932106.152515590] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750932106.152522863] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750932106.152528893] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[WARN] [1750932128.255302707] [PZ27C02404000166.fsm]: Control mode: 10
+[INFO] [1750932128.256143463] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750932128.256173861] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750932128.256180699] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750932128.256186762] [PZ27C02404000166.fsm]: Activated controller joint_trajectory_position_controller
+[INFO] [1750934195.425378815] [PZ27C02404000166.fsm]: Received signal 2
+[INFO] [1750934198.957677069] [PZ27C02404000166.fsm]: Reached home position
+[INFO] [1750934198.990639064] [PZ27C02404000166.fsm]: Activated controller gpio_controller
+[INFO] [1750934198.990719840] [PZ27C02404000166.fsm]: Activated controller id_controller
+[INFO] [1750934198.990727527] [PZ27C02404000166.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750934198.994517973] [PZ27C02404000166.fsm]: hardware '_led' state set to unconfigured
+[INFO] [1750934198.994910447] [PZ27C02404000166.fsm]: hardware '_button' state set to unconfigured
+[INFO] [1750934199.015371528] [PZ27C02404000166.fsm]: hardware 'joint6' state set to unconfigured
+[INFO] [1750934199.035653757] [PZ27C02404000166.fsm]: hardware 'joint5' state set to unconfigured
+[INFO] [1750934199.036156611] [PZ27C02404000166.fsm]: hardware 'joint3' state set to unconfigured
+[INFO] [1750934199.036255656] [PZ27C02404000166.fsm]: hardware 'joint2' state set to unconfigured
+[INFO] [1750934199.046780661] [PZ27C02404000166.fsm]: hardware 'eef_gripper_joint' state set to unconfigured
+[INFO] [1750934199.067433800] [PZ27C02404000166.fsm]: hardware 'joint4' state set to unconfigured
+[INFO] [1750934199.067484676] [PZ27C02404000166.fsm]: hardware 'joint1' state set to unconfigured

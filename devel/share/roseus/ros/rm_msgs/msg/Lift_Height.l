@@ -1,1 +1,0 @@
-/home/ytm/ytm_space/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/Lift_Height.l

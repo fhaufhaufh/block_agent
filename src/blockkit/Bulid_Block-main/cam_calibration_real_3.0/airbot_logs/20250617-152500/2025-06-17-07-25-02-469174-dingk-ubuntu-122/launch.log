@@ -1,0 +1,64 @@
+1750145102.4698195 [INFO] [launch]: All log files can be found below /userdata/2025-06-17-07-25-02-469174-dingk-ubuntu-122
+1750145102.4699280 [INFO] [launch]: Default logging verbosity is set to INFO
+1750145103.1980329 [INFO] [server_node-1]: process started with pid [129]
+1750145103.1982503 [INFO] [ros2_control_node-2]: process started with pid [131]
+1750145103.1983516 [INFO] [spawner-3]: process started with pid [133]
+1750145103.1984365 [INFO] [spawner-4]: process started with pid [135]
+1750145103.1985145 [INFO] [spawner-5]: process started with pid [137]
+1750145103.1985939 [INFO] [spawner-6]: process started with pid [139]
+1750145103.1986649 [INFO] [spawner-7]: process started with pid [141]
+1750145103.1987405 [INFO] [spawner-8]: process started with pid [143]
+1750145103.1988156 [INFO] [spawner-9]: process started with pid [145]
+1750145103.1988869 [INFO] [robot_state_publisher-10]: process started with pid [147]
+1750145103.1989591 [INFO] [move_group-11]: process started with pid [149]
+1750145103.1990273 [INFO] [servo_node-12]: process started with pid [151]
+1750145103.1991017 [INFO] [server-13]: process started with pid [153]
+1750145103.1991792 [INFO] [aggregator_node-14]: process started with pid [155]
+1750145103.1992507 [INFO] [spawner-15]: process started with pid [157]
+1750145103.1993225 [INFO] [spawner-16]: process started with pid [159]
+1750145103.1993911 [INFO] [spawner-17]: process started with pid [161]
+1750145103.1994619 [INFO] [component_container_mt-18]: process started with pid [163]
+1750145103.3186886 [server-13] 1750145103.317804 [199]     server: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.4022536 [servo_node-12] 1750145103.401370 [199] servo_node: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.4111686 [servo_node-12] [33m[WARN] [1750145103.410864088] [PZ27C02404000189.servo_node]: Could not enable FIFO RT scheduling policy. Continuing with the default.[0m
+1750145103.4117441 [servo_node-12] [33m[WARN] [1750145103.410946455] [PZ27C02404000189.servo_node]: Realtime kernel is recommended for better performance.[0m
+1750145103.5814567 [spawner-16] 1750145103.581109 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.5820086 [spawner-3] 1750145103.581113 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.5822809 [spawner-9] 1750145103.581131 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.5852442 [spawner-6] 1750145103.584680 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.5857358 [spawner-7] 1750145103.585087 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.6108325 [spawner-4] 1750145103.610492 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.6178660 [spawner-8] 1750145103.617604 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.6417069 [spawner-15] 1750145103.640953 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.6516483 [spawner-5] 1750145103.651040 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.6582127 [spawner-17] 1750145103.657474 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145103.9276626 [INFO] [spawner-9]: process has finished cleanly [pid 145]
+1750145103.9294126 [INFO] [spawner-7]: process has finished cleanly [pid 141]
+1750145103.9305613 [INFO] [spawner-16]: process has finished cleanly [pid 159]
+1750145103.9319010 [INFO] [spawner-6]: process has finished cleanly [pid 139]
+1750145104.0241616 [INFO] [spawner-8]: process has finished cleanly [pid 143]
+1750145104.0279663 [INFO] [spawner-15]: process has finished cleanly [pid 157]
+1750145104.0286932 [INFO] [spawner-4]: process has finished cleanly [pid 135]
+1750145104.0316405 [INFO] [spawner-5]: process has finished cleanly [pid 137]
+1750145104.1243026 [INFO] [spawner-3]: process has finished cleanly [pid 133]
+1750145104.1325283 [INFO] [spawner-17]: process has finished cleanly [pid 161]
+1750145107.6519854 [servo_node-12] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+1750145107.6521456 [servo_node-12]          at line 127 in /root/ros2_ws/src/deps/ros/class_loader/src/class_loader.cpp
+1750145121.5820718 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1750145121.5867410 [INFO] [component_container_mt-18]: sending signal 'SIGINT' to process[component_container_mt-18]
+1750145121.5896983 [INFO] [aggregator_node-14]: sending signal 'SIGINT' to process[aggregator_node-14]
+1750145121.5919259 [INFO] [server-13]: sending signal 'SIGINT' to process[server-13]
+1750145121.5939765 [INFO] [servo_node-12]: sending signal 'SIGINT' to process[servo_node-12]
+1750145121.5958729 [INFO] [move_group-11]: sending signal 'SIGINT' to process[move_group-11]
+1750145121.5976002 [INFO] [robot_state_publisher-10]: sending signal 'SIGINT' to process[robot_state_publisher-10]
+1750145121.5998883 [INFO] [ros2_control_node-2]: sending signal 'SIGINT' to process[ros2_control_node-2]
+1750145121.6021640 [INFO] [server_node-1]: sending signal 'SIGINT' to process[server_node-1]
+1750145121.6447964 [server-13] terminate called without an active exception
+1750145121.6774435 [INFO] [servo_node-12]: process has finished cleanly [pid 151]
+1750145121.7467790 [INFO] [move_group-11]: process has finished cleanly [pid 149]
+1750145121.8686957 [ERROR] [server-13]: process has died [pid 153, exit code -6, cmd '/root/ros2_ws/install/sdk_server/lib/sdk_server/server --ros-args --log-level warn --ros-args -r __ns:=/PZ27C02404000189 --params-file /tmp/launch_params_f0fm3mxz'].
+1750145122.6125259 [INFO] [component_container_mt-18]: process has finished cleanly [pid 163]
+1750145122.6290057 [INFO] [aggregator_node-14]: process has finished cleanly [pid 155]
+1750145122.6694756 [ERROR] [server_node-1]: process has died [pid 129, exit code 1, cmd '/root/ros2_ws/install/airbot_system_identify/lib/airbot_system_identify/server_node --ros-args --log-level warn --ros-args -r __node:=heath_checker -r __ns:=/PZ27C02404000189 --params-file /tmp/launch_params_m2t8qz_1'].
+1750145122.7322035 [INFO] [robot_state_publisher-10]: process has finished cleanly [pid 147]
+1750145123.0734615 [INFO] [ros2_control_node-2]: process has finished cleanly [pid 131]

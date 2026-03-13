@@ -1,1 +1,0 @@
-/home/ytm/ytm_space/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_Start_Multi_Drag_Teach.lisp

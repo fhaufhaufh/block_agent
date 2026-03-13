@@ -1,0 +1,881 @@
+[WARN] [1750934436.302209967] [PZ27C02404000166.controller_manager]: Could not enable FIFO RT scheduling policy: with error number <1>(Operation not permitted). See [https://control.ros.org/master/doc/ros2_control/controller_manager/doc/userdoc.html] for details on how to enable realtime scheduling.
+[WARN] [1750934436.475712111] [PZ27C02404000166.controller_manager.resource_manager]: Importing state interfaces for the hardware '_led' returned no state interfaces.
+[WARN] [1750934440.496616698] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[WARN] [1750934440.502804161] [PZ27C02404000166.joint_trajectory_position_controller]: [deprecated] 'open_loop_control' parameter is deprecated. Instead, set the feedback gains to zero and use 'interpolate_from_desired_state' parameter
+[WARN] [1750934440.512224544] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[WARN] [1750934440.526467920] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.eef_gripper_joint]: Waiting for mode change ...
+[WARN] [1750934440.538873988] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934440.538898339] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934440.538932235] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750934440.538938069] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934440.538943798] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750934440.538948682] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934440.538954144] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750934440.538959404] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934449.155181228] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934449.155206432] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934449.155212144] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934449.155215876] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934449.155219364] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934449.155222546] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934449.155225799] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934449.155228808] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934449.155232281] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750934449.155235541] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934449.155238966] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750934449.155241845] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934449.155244980] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750934449.155248013] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934466.506604666] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934467.510589229] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934468.510592277] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934469.510595508] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934470.510640477] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934471.514597841] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934472.518593346] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934473.522577491] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934474.522588740] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934475.526595723] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934476.526597296] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934477.526694514] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934478.530788398] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934479.534601471] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934480.534617906] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934481.538595364] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934482.538651698] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934483.538757511] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934484.542591716] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934485.542598215] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934486.542611917] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934487.546634688] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934488.546661464] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934489.546730776] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934490.550630943] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934491.550700857] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934492.550701482] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934493.550717246] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934494.554595590] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934495.554611613] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934496.554639357] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934497.554861182] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934498.558615565] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934499.562608861] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934500.562631395] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934501.562738008] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934502.427166065] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934502.427192045] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934502.427198968] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934502.427202514] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934502.427206130] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934502.427209323] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934502.427212899] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934502.427216265] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934502.427220994] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750934502.427224188] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934502.427227924] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750934502.427230897] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934502.427235538] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750934502.427238677] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934502.562744888] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934524.062604347] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934525.062609761] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934526.062626284] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934527.066602187] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934528.066632004] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934529.070611975] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934530.070707200] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934531.074660882] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934532.078587920] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934533.078591972] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934534.078620139] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934535.078635819] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934536.082586772] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934537.086579662] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934538.086587457] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934539.086613301] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934540.086626509] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934541.090602378] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934542.094631124] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934543.098590443] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934544.102592598] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934545.102605160] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934546.106584367] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934547.106600525] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934548.110590672] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934549.114581060] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934550.114594159] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934551.114618183] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934552.114907955] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934553.118694819] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934554.118784959] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934555.122627345] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934556.122638309] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934557.126685908] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934558.130624385] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934559.134628373] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934560.138605494] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934561.138653030] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934562.138705818] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934563.142626566] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934564.142778420] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934565.146665375] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934566.150606842] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934567.150615859] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934568.150616975] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934569.154601706] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934570.154625102] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934571.154652425] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934572.154755779] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934573.158619889] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934574.158678570] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934575.158841272] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934576.162698544] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934577.166624221] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934578.170596110] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934579.174621170] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934580.174635109] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934581.174659499] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934582.174717615] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934583.178663287] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934584.182587768] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934585.182853946] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934586.182874148] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934587.186825840] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934588.190612405] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934589.194607774] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934590.194626087] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934591.194708344] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934592.198637459] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934593.198696193] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934594.202589965] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934595.202786874] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934596.202889104] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934597.206586280] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934598.206604958] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934599.206638441] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934600.210572817] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934601.210601921] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934602.210730348] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934603.214605111] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934604.218602220] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934605.218616786] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934606.218671247] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934607.222614973] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934608.222905961] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934609.226633421] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934610.230583305] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934611.230688974] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934612.234638304] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934613.234710230] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934614.238606770] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934615.094993566] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934615.095028079] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934615.095035116] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934615.095039103] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934615.095042833] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934615.095048510] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934615.095053255] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934615.095056532] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934615.095060760] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750934615.095064091] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934615.095068075] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750934615.095071454] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934615.095074658] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750934615.095078078] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934615.238610243] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750934798.139992349] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934798.140025662] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934798.140032227] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934798.140035502] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934798.140039122] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934798.140042496] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934798.140045974] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750934798.140049474] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934798.140053023] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750934798.140056444] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934798.140060055] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750934798.140063043] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750934798.140066208] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750934798.140069190] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935096.083666953] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935096.083696663] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935096.083702708] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935096.083706276] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935096.083710450] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935096.083713473] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935096.083717026] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935096.083720120] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935096.083723887] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750935096.083727400] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935096.083731662] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750935096.083734721] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935096.083737957] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750935096.083740956] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935103.743894758] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935103.743922519] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935103.743929810] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935103.743933425] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935103.743937454] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935103.743940885] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935103.743945240] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935103.743948804] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935103.743952869] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750935103.743956552] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935103.743960271] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750935103.743963433] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935103.743966615] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750935103.743969647] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935119.986310906] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935119.986340974] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935119.986347881] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935119.986351257] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935119.986356653] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935119.986360110] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935119.986364256] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935119.986367957] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935119.986372037] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750935119.986375741] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935119.986379490] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750935119.986382679] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935119.986386062] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750935119.986389129] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935149.106603038] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935150.110584944] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935151.114587309] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935255.516159194] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935255.516188979] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935255.516197478] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935255.516200940] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935255.516205438] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935255.516208538] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935255.516212175] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935255.516215547] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935255.516219648] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750935255.516223281] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935255.516226967] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750935255.516230268] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935255.516233548] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750935255.516237222] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935272.850584793] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935273.854588438] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935274.854590482] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935275.858597038] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935349.420717845] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935349.420744844] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935349.420751424] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935349.420754825] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935349.420758979] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935349.420762725] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935349.420766713] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935349.420769898] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935349.420773757] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750935349.420777185] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935349.420781211] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750935349.420784537] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935349.420787852] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750935349.420790851] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935391.982621797] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935392.986592085] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935393.986600772] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935394.986615110] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935395.990604678] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935396.990677026] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935397.994624347] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935398.998742061] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935400.002601709] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935401.002622759] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935402.002635463] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935470.399007219] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935470.399031249] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935470.399038217] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935470.399041867] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935470.399045784] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935470.399048888] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935470.399052278] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935470.399055682] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935470.399059677] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750935470.399063772] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935470.399067922] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750935470.399073129] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935470.399105760] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750935470.399109742] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935513.006592429] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935514.006592597] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935515.010609608] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935516.010613832] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935517.014590187] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935518.014675879] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935519.018599257] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935520.018607582] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935521.018626954] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935522.022606374] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935523.026591186] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935617.866720267] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935617.866748705] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935617.866755830] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935617.866764423] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935617.866768279] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935617.866771398] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935617.866776577] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935617.866781483] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935617.866786929] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750935617.866792417] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935617.866798006] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750935617.866802539] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935617.866807159] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750935617.866812078] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935660.446633470] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935661.446687902] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935662.450592708] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935663.450618239] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935664.450644531] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935665.450800599] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935666.454593602] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935667.458593555] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935668.458622748] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935669.462656330] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935670.466643929] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935714.894837422] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935714.894863211] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935714.894870475] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935714.894874075] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935714.894877643] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935714.894881263] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935714.894884814] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935714.894887968] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935714.894891521] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750935714.894894985] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935714.894898520] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750935714.894901702] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935714.894904836] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750935714.894907915] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935776.174602497] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935777.178611243] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935778.182600663] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935779.186602761] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935780.186622896] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935781.186802299] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935782.190665993] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935783.194585348] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935784.194701036] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935785.198643105] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935786.202656649] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935787.206598618] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935788.206601676] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935789.210617988] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935790.214734136] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935791.218662488] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935859.570582215] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935860.570610365] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935861.570627014] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935862.574651537] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935863.578609998] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935864.578632673] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935865.578634615] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935866.578641802] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935867.582593802] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935868.582628100] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935869.586638070] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935870.586683882] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935871.586720192] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935872.590700118] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935873.590859163] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935874.594595155] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935875.594676645] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935876.594747037] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935877.598607340] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935878.602615278] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935879.602634122] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935880.606607520] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935881.610610588] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935882.610617614] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935883.610692066] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935884.614640206] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935885.618595899] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935886.622610306] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935887.622613017] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935888.622664460] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935889.626591411] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935890.626642155] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935891.630581633] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935892.634636370] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935893.638593112] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935894.638596404] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935895.638613920] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935896.638624853] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935897.638702718] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935898.642582085] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935899.642619100] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935900.646769791] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935901.650641250] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935902.654600800] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935903.654610878] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935904.658639823] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935905.658644195] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935906.662619997] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935907.666579904] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935908.666670588] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935909.670619693] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935910.674603391] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935911.678584675] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935912.682588704] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935913.682861115] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935914.686633353] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935915.686719071] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935916.690590396] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935917.694584514] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935918.694612993] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935919.694628241] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935920.698582976] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935921.698649823] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935922.702629561] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935923.702653930] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935924.706610186] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935925.710596912] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935926.714593104] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935927.718582639] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935928.718632485] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935929.722583313] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935930.722688424] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935931.726592500] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935932.730699650] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935933.734599115] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935934.734624708] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935935.738592014] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935936.739132936] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935937.371319902] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935937.371345640] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935937.371352794] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935937.371356207] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935937.371360212] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935937.371363917] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935937.371367269] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750935937.371370401] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935937.371373951] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750935937.371377402] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935937.371380947] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750935937.371384082] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935937.371387451] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750935937.371390541] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750935937.742590561] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935998.690594910] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750935999.694618372] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936000.694661243] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936001.698600090] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936002.698616407] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936003.698731121] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936004.702612339] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936005.702630979] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936006.702668233] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936007.702751875] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936008.706672074] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936009.706691951] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936010.710655454] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936011.714610080] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936012.718644080] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936013.722623475] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936082.062617006] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936083.062624141] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936084.066587865] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936085.066599033] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936086.070582524] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936087.070599681] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936088.074580947] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936089.074635931] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936090.078612364] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936091.078642872] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936092.082637497] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936093.086585616] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936094.086633486] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936095.090587954] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936096.090610059] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936097.094608703] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936098.094617802] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936099.098592259] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936100.098601477] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936101.098721166] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936102.102674948] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936103.106574700] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936104.106612552] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936105.106645540] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936106.110600918] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936107.110651203] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936108.114578268] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936109.114619053] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936110.114630738] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936111.118588870] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936112.118597594] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936113.118597865] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936114.118725488] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936115.122593073] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936116.126596510] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936117.126602855] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936118.130598011] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936119.134603750] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936120.138604376] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936121.138657823] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936122.142608073] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936123.142622267] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936124.146596018] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936125.146603095] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936126.146621845] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936127.150610957] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936128.154601976] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936129.158616936] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936130.162660879] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936131.166585218] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936132.166605527] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936133.166700958] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936134.170631197] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936135.170647100] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936136.174597537] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936137.178597715] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936138.178613051] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936139.178626348] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936140.182594312] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936141.182601781] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936142.186590961] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936143.190591139] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936144.190608092] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936145.194592248] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936146.194613961] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936147.194614468] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936148.194789636] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936149.198632661] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936150.202606422] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936151.202647180] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936152.202736913] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936153.206637930] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936154.210592096] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936155.214581192] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936156.214603525] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936157.218583064] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936158.218598712] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936159.222587880] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936160.226580351] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936161.226609421] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936162.226725078] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936163.230582968] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936164.230608095] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936165.230754665] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936166.234609422] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936167.234850833] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936168.238609341] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936169.242577189] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936170.242602099] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936171.242840402] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936172.246621688] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936173.250636137] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936174.250745455] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936175.254605644] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936176.258607136] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936177.258755056] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936178.262593309] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936179.266601806] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936180.266612157] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936181.266624725] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936182.270600123] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936183.270609597] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936184.270639393] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936185.274754152] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936186.278583265] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936187.278591946] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936188.278597625] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936189.278602615] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936190.282590774] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936191.282591716] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936192.282603679] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936193.286613089] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936194.290662690] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936195.290683021] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936196.294592949] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936197.298579775] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936198.298665572] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936199.302615848] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936200.306597998] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936201.306606946] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936202.310600875] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936203.310604476] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936204.310752672] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936205.314594224] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936206.318587605] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936207.318596723] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936208.322615620] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936209.322621709] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936210.326592166] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936211.326600501] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936212.326603914] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936213.326625348] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936214.330604093] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936215.334599437] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936216.338622175] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936217.342589148] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936218.342601387] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936219.342806291] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936220.346607619] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936221.350574456] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936222.350595941] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936223.350603399] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936224.350625798] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936225.354599924] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936226.354606280] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936227.354635017] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936228.358591716] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936229.358637248] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936230.362622876] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936231.366625633] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936232.370615536] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936233.374618121] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936234.374646598] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936235.374654731] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936236.374759753] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936237.378644736] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936238.382593753] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936239.382625615] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936240.382647579] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936241.386630879] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936242.390640375] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936243.394614116] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936244.398638707] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936245.398679940] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936246.402619465] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936247.402635416] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936248.402653925] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936249.402716517] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936250.406616068] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936251.410631046] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936252.414595783] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936253.414619006] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936254.418585380] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936255.418623469] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936256.422591678] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936257.422612066] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936258.422616857] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936259.426609900] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936260.426626092] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936261.426649114] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936262.430728686] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936263.434600699] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936264.434617004] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936265.438595249] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936266.438605217] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936267.438622583] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936268.442597005] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936269.442634689] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936270.446693019] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936271.450741892] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936272.454639617] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936273.458852148] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936274.462812691] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936275.466651586] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936276.466667591] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936277.466697510] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936278.466719108] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936279.470851853] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936280.474601832] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936281.474668934] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936282.474830544] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936283.478589436] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936284.478617225] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936285.482669219] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936286.482675040] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936287.482835795] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936288.482872749] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936289.486713029] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936290.486727909] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936291.490691948] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936292.492516123] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936293.494728339] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936294.498663326] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936295.502707923] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936296.506643505] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936297.510582983] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936298.510796262] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936299.514653314] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936300.514676914] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936301.514680178] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936302.518710417] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936303.522643983] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936304.526624254] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936305.530598752] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936306.534656624] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936307.538598875] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936308.538786353] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936309.542578835] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936310.542592920] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936311.542602543] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936312.546585899] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936313.550575898] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936314.550583356] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936315.550610083] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936316.554604373] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936317.558595390] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936318.562614872] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936319.562672088] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936320.566597258] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936321.566605289] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936322.566633745] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936323.570742298] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936324.574614136] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936325.578610901] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936326.578674101] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936327.582657076] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936328.586597905] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936329.586647011] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936330.586702585] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936331.586805895] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936332.590632739] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936333.590710551] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936334.590718433] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936335.594661175] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936336.594806780] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936337.594930907] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936338.598638804] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936339.598677654] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936340.602646362] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936341.606606719] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936342.610594847] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936343.614610236] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936344.614627339] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936345.614937848] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936346.618664874] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936347.622593731] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936348.622651594] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936349.626581457] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936350.626602939] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936351.630578469] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936352.630607023] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936353.634585461] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936354.634749645] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936355.638611014] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936356.638618288] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936357.642599299] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936358.642602901] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936359.642609407] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936360.646598880] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936361.646668975] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936362.650590722] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936363.650593010] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936364.650629348] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936365.650657877] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936366.654585532] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936367.654588308] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936368.654616343] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936369.658577932] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936370.658615414] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936371.662588090] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936372.666590670] [PZ27C02404000166.id_controller]: add the force of gravity to joint 3
+[WARN] [1750936373.164020829] [PZ27C02404000166.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750936373.164048632] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750936373.164055212] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750936373.164058506] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750936373.164063356] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750936373.164066949] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750936373.164772156] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750936373.164784259] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750936373.164790710] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750936373.164795214] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750936376.689893787] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gripper_mapping_controller' because preceding controller with name 'end_effector_position_controller' is active and will not be deactivated.
+[WARN] [1750936376.690196138] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gripper_mapping_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750936376.708313426] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750936376.708340680] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750936376.708346759] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750936376.708350982] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750936376.708354782] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750936376.708358349] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750936376.708363014] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750936376.708366269] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750936376.840668734] [PZ27C02404000166.controller_manager.resource_manager]: (hardware '_led'): 'led/led_mode' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.858892188] [PZ27C02404000166.controller_manager.resource_manager]: (hardware '_button'): 'buttons/end_button' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.858923149] [PZ27C02404000166.controller_manager.resource_manager]: (hardware '_button'): 'buttons/base_button' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876642278] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876669477] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876673455] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876676866] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876705513] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876709242] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876712850] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876716418] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876719892] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876722800] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876728290] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876731874] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.876735120] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894111857] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894136900] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894140817] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894144097] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894147453] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894150369] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894153795] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894157409] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894160652] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894163673] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894196118] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894200577] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.894203649] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910005416] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910033998] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910037768] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910040999] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910044012] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910047540] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910052148] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910056061] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910059406] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910062711] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910065769] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910069117] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.910072391] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929297572] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929324885] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929351336] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929358453] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929362101] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929365332] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929369082] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929372420] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929375774] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929378822] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929381649] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929384797] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.929388248] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.947895441] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.947936187] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.947941179] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.947944882] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.947948342] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.947951749] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.947955808] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.947990535] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.947994806] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.947997893] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.948000989] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.948004409] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.948007558] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965483098] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965505441] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965509803] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965513623] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965517030] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965520079] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965523672] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965527452] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965530524] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965533371] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965536646] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965539825] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.965557367] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983031455] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983057680] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983062833] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983067197] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983071587] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983075889] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983080381] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983085499] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983089675] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983095012] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983099518] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983104140] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1750936376.983108808] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).

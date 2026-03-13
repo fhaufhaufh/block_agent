@@ -1,1 +1,0 @@
-/home/ytm/ytm_space/devel/.private/map_msgs/share/roseus/ros/map_msgs/srv/SetMapProjections.l

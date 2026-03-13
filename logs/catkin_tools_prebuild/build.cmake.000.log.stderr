@@ -1,9 +1,26 @@
-[31m[1mCMake Error[0m at /opt/ros/noetic/share/catkin/cmake/empy.cmake:30 (message):
-  Unable to find either executable 'empy' or Python module 'em'...  try
-  installing the package 'python3-empy'
-[36mCall Stack (most recent call first):[0m
-  /opt/ros/noetic/share/catkin/cmake/all.cmake:164 (include)
-  /opt/ros/noetic/share/catkin/cmake/catkinConfig.cmake:20 (include)
-  CMakeLists.txt:4 (find_package)
+[31m[1mCMake Error[0m at /home/ytm/block_agent/build/catkin_tools_prebuild/CMakeLists.txt:12 (message):
+  The catkin CMake module was not found, but it is required to build a linked
+  workspace.  To resolve this, please do one of the following, and try
+  building again.
+
+
+
+   1. Source the setup.sh file from an existing catkin workspace:
+      source SETUP_FILE
+
+
+
+   2. Extend another catkin workspace's result (install or devel) space:
+      catkin config --extend RESULT_SPACE
+
+
+
+   3. Set `catkin_DIR` to the directory containing `catkin-config.cmake`:
+      catkin config --cmake-args -Dcatkin_DIR=CATKIN_CMAKE_CONFIG_PATH
+
+
+
+   4. Add the catkin source package to your workspace's source space:
+      cd SOURCE_SPACE && git clone https://github.com/ros/catkin.git
 
 

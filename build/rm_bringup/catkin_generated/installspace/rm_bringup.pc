@@ -1,8 +1,0 @@
-prefix=/home/ytm/ytm_space/install
-
-Name: rm_bringup
-Description: Description of rm_bringup
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

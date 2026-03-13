@@ -1,1 +1,0 @@
-/home/ytm/ytm_space/devel/.private/map_msgs/include/map_msgs/GetPointMap.h

@@ -1,0 +1,3 @@
+[INFO] [1750143963.847645169] [identify_product]: Product info file not found or empty, reading from device
+[ERROR] [1750143963.847920523] [identify_product]: CAN interface can_left is used by other process
+[ERROR] [1750143963.847973766] [init]: Failed to identify product

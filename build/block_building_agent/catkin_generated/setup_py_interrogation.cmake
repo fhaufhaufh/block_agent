@@ -1,0 +1,7 @@
+set(block_building_agent_SETUP_PY_SETUP_MODULE "setuptools")
+set(block_building_agent_SETUP_PY_VERSION "0.1.0")
+set(block_building_agent_SETUP_PY_SCRIPTS "")
+set(block_building_agent_SETUP_PY_PACKAGES "")
+set(block_building_agent_SETUP_PY_PACKAGE_DIRS "")
+set(block_building_agent_SETUP_PY_MODULES "")
+set(block_building_agent_SETUP_PY_MODULE_DIRS "")

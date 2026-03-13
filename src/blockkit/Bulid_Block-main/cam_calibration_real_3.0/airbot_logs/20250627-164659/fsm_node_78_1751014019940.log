@@ -1,0 +1,2 @@
+[INFO] [1751014019.940894961] [identify_product]: Product info file not found or empty, reading from device
+[ERROR] [1751014019.940941494] [identify_product]: Failed to get CAN interface index

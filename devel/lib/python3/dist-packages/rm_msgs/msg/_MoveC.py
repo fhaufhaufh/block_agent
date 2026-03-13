@@ -1,1 +1,0 @@
-/home/ytm/ytm_space/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_MoveC.py

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 启动规划节点 -->
+    <node name="block_planning_node" 
+          pkg="block_building_agent" 
+          type="planning_node.py" 
+          output="screen">
+        
+        <!-- 设置环境变量（如果需要） -->
+        <env name="PYTHONPATH" value="$(find block_building_agent)/src:$(env PYTHONPATH)" />
+
+    <!-- 无外部 /vision/blocks_info 时：启动即触发一次 img_ana -> advisor -> validator -->
+    <param name="auto_once" value="true" />
+        
+        <!-- 加载参数（可选） -->
+        <!-- <rosparam command="load" file="$(find block_building_agent)/config/agents.yaml" /> -->
+    </node>
+</launch>

@@ -1,0 +1,83 @@
+1750145168.3432298 [INFO] [launch]: All log files can be found below /userdata/2025-06-17-07-26-08-342592-dingk-ubuntu-122
+1750145168.3433478 [INFO] [launch]: Default logging verbosity is set to INFO
+1750145169.0567982 [INFO] [server_node-1]: process started with pid [129]
+1750145169.0570030 [INFO] [ros2_control_node-2]: process started with pid [131]
+1750145169.0571043 [INFO] [spawner-3]: process started with pid [133]
+1750145169.0571866 [INFO] [spawner-4]: process started with pid [135]
+1750145169.0572524 [INFO] [spawner-5]: process started with pid [137]
+1750145169.0573137 [INFO] [spawner-6]: process started with pid [139]
+1750145169.0573778 [INFO] [spawner-7]: process started with pid [141]
+1750145169.0574348 [INFO] [spawner-8]: process started with pid [143]
+1750145169.0574913 [INFO] [spawner-9]: process started with pid [145]
+1750145169.0575476 [INFO] [robot_state_publisher-10]: process started with pid [147]
+1750145169.0576067 [INFO] [move_group-11]: process started with pid [149]
+1750145169.0576656 [INFO] [servo_node-12]: process started with pid [151]
+1750145169.0577238 [INFO] [server-13]: process started with pid [153]
+1750145169.0577815 [INFO] [aggregator_node-14]: process started with pid [155]
+1750145169.0578392 [INFO] [spawner-15]: process started with pid [157]
+1750145169.0578961 [INFO] [spawner-16]: process started with pid [163]
+1750145169.0579529 [INFO] [spawner-17]: process started with pid [165]
+1750145169.0580089 [INFO] [component_container_mt-18]: process started with pid [167]
+1750145169.1449366 [servo_node-12] 1750145169.144666 [199] servo_node: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.1583557 [servo_node-12] [33m[WARN] [1750145169.158061373] [PZ27C02404000189.servo_node]: Could not enable FIFO RT scheduling policy. Continuing with the default.[0m
+1750145169.1591055 [servo_node-12] [33m[WARN] [1750145169.158186512] [PZ27C02404000189.servo_node]: Realtime kernel is recommended for better performance.[0m
+1750145169.1785173 [server-13] 1750145169.178198 [199]     server: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.3582191 [spawner-15] 1750145169.357914 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.3871593 [spawner-8] 1750145169.386862 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.3933856 [spawner-5] 1750145169.393067 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.4027722 [spawner-7] 1750145169.402544 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.4072790 [spawner-17] 1750145169.406997 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.4243879 [spawner-9] 1750145169.424039 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.4301665 [spawner-3] 1750145169.429843 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.4373045 [spawner-16] 1750145169.437017 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.4601457 [spawner-6] 1750145169.459731 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.5289874 [spawner-4] 1750145169.528681 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750145169.6804976 [INFO] [spawner-15]: process has finished cleanly [pid 157]
+1750145169.8187196 [INFO] [spawner-5]: process has finished cleanly [pid 137]
+1750145169.8198011 [INFO] [spawner-17]: process has finished cleanly [pid 165]
+1750145169.8202162 [INFO] [spawner-3]: process has finished cleanly [pid 133]
+1750145169.8215494 [INFO] [spawner-9]: process has finished cleanly [pid 145]
+1750145169.8227246 [INFO] [spawner-8]: process has finished cleanly [pid 143]
+1750145169.8233452 [INFO] [spawner-6]: process has finished cleanly [pid 139]
+1750145169.8281584 [INFO] [spawner-7]: process has finished cleanly [pid 141]
+1750145169.8344858 [INFO] [spawner-16]: process has finished cleanly [pid 163]
+1750145169.9063601 [INFO] [spawner-4]: process has finished cleanly [pid 135]
+1750145173.3125432 [servo_node-12] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+1750145173.3127685 [servo_node-12]          at line 127 in /root/ros2_ws/src/deps/ros/class_loader/src/class_loader.cpp
+1750147633.2140665 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1750147633.2188382 [INFO] [component_container_mt-18]: sending signal 'SIGINT' to process[component_container_mt-18]
+1750147633.2209570 [INFO] [aggregator_node-14]: sending signal 'SIGINT' to process[aggregator_node-14]
+1750147633.2234375 [INFO] [server-13]: sending signal 'SIGINT' to process[server-13]
+1750147633.2259967 [INFO] [servo_node-12]: sending signal 'SIGINT' to process[servo_node-12]
+1750147633.2286849 [INFO] [move_group-11]: sending signal 'SIGINT' to process[move_group-11]
+1750147633.2318404 [INFO] [robot_state_publisher-10]: sending signal 'SIGINT' to process[robot_state_publisher-10]
+1750147633.2357976 [INFO] [ros2_control_node-2]: sending signal 'SIGINT' to process[ros2_control_node-2]
+1750147633.2386065 [INFO] [server_node-1]: sending signal 'SIGINT' to process[server_node-1]
+1750147633.2390850 [servo_node-12] terminate called after throwing an instance of 'std::runtime_error'
+1750147633.2392154 [servo_node-12]   what():  context cannot be slept with because it's invalid
+1750147633.2393012 [servo_node-12] Stack trace (most recent call last) in thread 344:
+1750147633.2399633 [server-13] [31m[ERROR] [1750147633.229799126] [PZ27C02404000189.sdk_server]: Transform error: "PZ27C02404000189/base_link" passed to lookupTransform argument target_frame does not exist. [0m
+1750147633.2402248 [servo_node-12] #14   Object "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2", at 0xffffffffffffffff, in 
+1750147633.2402978 [servo_node-12] #13   Object "/usr/lib/x86_64-linux-gnu/libc.so.6", at 0x78b694e5aa03, in __clone
+1750147633.2403643 [servo_node-12] #12   Object "/usr/lib/x86_64-linux-gnu/libc.so.6", at 0x78b694dc9ac2, in 
+1750147633.2409949 [servo_node-12] #11   Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30", at 0x78b69505c252, in 
+1750147633.2417009 [servo_node-12] #10   Object "/opt/ros/jazzy/moveit_ros_planning/lib/libmoveit_planning_scene_monitor.so.2.12.2", at 0x78b6912ac89c, in planning_scene_monitor::PlanningSceneMonitor::scenePublishingThread()
+1750147633.2451448 [servo_node-12] #9    Object "/opt/ros/jazzy/rclcpp/lib/librclcpp.so", at 0x78b69547a6c8, in rclcpp::Rate::sleep()
+1750147633.2458372 [servo_node-12] #8    Object "/opt/ros/jazzy/rclcpp/lib/librclcpp.so", at 0x78b69535a81b, in rclcpp::Clock::sleep_for(rclcpp::Duration, std::shared_ptr<rclcpp::Context>)
+1750147633.2462008 [servo_node-12] #7    Object "/opt/ros/jazzy/rclcpp/lib/librclcpp.so", at 0x78b69533114c, in rclcpp::Clock::sleep_until(rclcpp::Time, std::shared_ptr<rclcpp::Context>) [clone .cold]
+1750147633.2468359 [servo_node-12] #6    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30", at 0x78b69502e4d7, in __cxa_throw
+1750147633.2471955 [servo_node-12] #5    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30", at 0x78b69502e276, in std::terminate()
+1750147633.2477763 [servo_node-12] #4    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30", at 0x78b69502e20b, in 
+1750147633.2478552 [servo_node-12] #3    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30", at 0x78b695022b9d, in 
+1750147633.2483397 [servo_node-12] #2    Object "/usr/lib/x86_64-linux-gnu/libc.so.6", at 0x78b694d5d7f2, in abort
+1750147633.2484200 [servo_node-12] #1    Object "/usr/lib/x86_64-linux-gnu/libc.so.6", at 0x78b694d77475, in raise
+1750147633.2490032 [servo_node-12] #0    Object "/usr/lib/x86_64-linux-gnu/libc.so.6", at 0x78b694dcb9fc, in pthread_kill
+1750147633.2490833 [servo_node-12] Aborted (Signal sent by tkill() 151 0)
+1750147633.4155045 [ERROR] [move_group-11]: process has died [pid 149, exit code -6, cmd '/opt/ros/jazzy/moveit_ros_move_group/lib/moveit_ros_move_group/move_group --ros-args --log-level warn --ros-args -r __ns:=/PZ27C02404000189 --params-file /tmp/launch_params_9qifogt5 --params-file /tmp/launch_params__dypl8fd --params-file /tmp/launch_params_96ct8l_x --params-file /tmp/launch_params_rjps6ha7 --params-file /tmp/launch_params_gty618_e --params-file /tmp/launch_params_mogum9g1 --params-file /tmp/launch_params_jndw3fej --params-file /tmp/launch_params_tmlsa0_x'].
+1750147633.4284158 [ERROR] [server-13]: process has died [pid 153, exit code -11, cmd '/root/ros2_ws/install/sdk_server/lib/sdk_server/server --ros-args --log-level warn --ros-args -r __ns:=/PZ27C02404000189 --params-file /tmp/launch_params_oyso0h_d'].
+1750147633.4437652 [ERROR] [servo_node-12]: process has died [pid 151, exit code -6, cmd '/root/ros2_ws/install/moveit_servo/lib/moveit_servo/servo_node --ros-args --log-level warn --ros-args -r __ns:=/PZ27C02404000189 --params-file /tmp/launch_params_ygv3jwfm --params-file /tmp/launch_params_5pfwnvvi --params-file /tmp/launch_params_y3jrg5qr --params-file /tmp/launch_params_ttpt0m1b'].
+1750147634.2466679 [INFO] [component_container_mt-18]: process has finished cleanly [pid 167]
+1750147634.2601955 [INFO] [aggregator_node-14]: process has finished cleanly [pid 155]
+1750147634.3064907 [ERROR] [server_node-1]: process has died [pid 129, exit code 1, cmd '/root/ros2_ws/install/airbot_system_identify/lib/airbot_system_identify/server_node --ros-args --log-level warn --ros-args -r __node:=heath_checker -r __ns:=/PZ27C02404000189 --params-file /tmp/launch_params_5y8xssq_'].
+1750147635.2667127 [INFO] [robot_state_publisher-10]: process has finished cleanly [pid 147]
+1750147635.7080407 [INFO] [ros2_control_node-2]: process has finished cleanly [pid 131]

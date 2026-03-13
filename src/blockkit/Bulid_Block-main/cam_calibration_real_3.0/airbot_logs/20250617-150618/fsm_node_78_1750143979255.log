@@ -1,0 +1,57 @@
+[INFO] [1750143979.255441817] [identify_product]: Product info file not found or empty, reading from device
+[INFO] [1750143979.356648013] [identify_product]: No error
+[INFO] [1750143979.357692343] [init]: ProductInfo: product_type: play, sn: PZ27C02404000189, is_sim: 0, interfaces: [can_left, ], arm_types: [play, ], eef_types: [G2, ]
+[INFO] [1750143979.484297412] [PZ27C02404000189.fsm]: product_type: play
+[INFO] [1750143979.488107702] [PZ27C02404000189.fsm]: ros2 launch process created
+[WARN] [1750143980.810929177] [PZ27C02404000189.fsm]: Arm controller not ready: gpio_controller gravity_compensation_controller joint_state_broadcaster joint_trajectory_position_controller robot_tracking_controller 
+[INFO] [1750143981.046450285] [PZ27C02404000189.fsm]: All arm controllers are ready
+[INFO] [1750143981.049458394] [PZ27C02404000189.fsm]: All eef controllers are ready
+[INFO] [1750143981.081154163] [PZ27C02404000189.fsm]: Transition configure for sdk_server succeeded
+[INFO] [1750143981.084641107] [PZ27C02404000189.fsm]: Transition activate for sdk_server succeeded
+[INFO] [1750143981.103987451] [PZ27C02404000189.fsm]: Configured controller gpio_controller
+[INFO] [1750143981.115448450] [PZ27C02404000189.fsm]: Activated controller gpio_controller
+[INFO] [1750143981.115527463] [PZ27C02404000189.fsm]: on change_led_color to 15
+[INFO] [1750143982.115813249] [PZ27C02404000189.fsm]: on change_led_color to 19
+[INFO] [1750143983.116786411] [PZ27C02404000189.fsm]: Waiting for coefficients ...
+[INFO] [1750143983.221649209] [PZ27C02404000189.fsm]: Gravity compensation coefficients: 0.6 0.6 0.6 1.5 1.5 1.5 
+[INFO] [1750143983.237354941] [PZ27C02404000189.fsm]: hardware '_led' state set to active
+[INFO] [1750143983.237473170] [PZ27C02404000189.fsm]: hardware '_button' state set to active
+[INFO] [1750143983.394262863] [PZ27C02404000189.fsm]: hardware 'joint6' state set to active
+[WARN] [1750143983.539988128] [PZ27C02404000189.fsm]: set hardware state 'joint5' to active failed, but continue
+[INFO] [1750143983.540048900] [PZ27C02404000189.fsm]: hardware 'joint5' state set to active
+[INFO] [1750143983.789975315] [PZ27C02404000189.fsm]: hardware 'joint3' state set to active
+[INFO] [1750143984.037943171] [PZ27C02404000189.fsm]: hardware 'joint2' state set to active
+[WARN] [1750143984.171791152] [PZ27C02404000189.fsm]: set hardware state 'eef_gripper_joint' to active failed, but continue
+[INFO] [1750143984.171882782] [PZ27C02404000189.fsm]: hardware 'eef_gripper_joint' state set to active
+[INFO] [1750143984.327664437] [PZ27C02404000189.fsm]: hardware 'joint4' state set to active
+[INFO] [1750143984.574948001] [PZ27C02404000189.fsm]: hardware 'joint1' state set to active
+[INFO] [1750143984.579829339] [PZ27C02404000189.fsm]: Configured controller forward_position_controller
+[INFO] [1750143984.583742360] [PZ27C02404000189.fsm]: Configured controller gravity_compensation_controller
+[INFO] [1750143984.599383624] [PZ27C02404000189.fsm]: Configured controller id_controller
+[INFO] [1750143984.607376847] [PZ27C02404000189.fsm]: Configured controller joint_state_broadcaster
+[INFO] [1750143984.615469522] [PZ27C02404000189.fsm]: Configured controller joint_trajectory_position_controller
+[INFO] [1750143984.627286215] [PZ27C02404000189.fsm]: Configured controller robot_tracking_controller
+[INFO] [1750143984.631312519] [PZ27C02404000189.fsm]: Configured controller gripper_mapping_controller
+[INFO] [1750143984.635305956] [PZ27C02404000189.fsm]: Configured controller end_effector_position_controller
+[INFO] [1750143984.643314183] [PZ27C02404000189.fsm]: Activated controller gripper_mapping_controller
+[INFO] [1750143984.651685062] [PZ27C02404000189.fsm]: Activated controller end_effector_position_controller
+[INFO] [1750143984.659374797] [PZ27C02404000189.fsm]: Activated controller gpio_controller
+[INFO] [1750143984.659407860] [PZ27C02404000189.fsm]: Activated controller id_controller
+[INFO] [1750143984.659421957] [PZ27C02404000189.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750143984.659431902] [PZ27C02404000189.fsm]: Activated controller joint_trajectory_position_controller
+[INFO] [1750143984.659444959] [PZ27C02404000189.fsm]: on change_led_color to 20
+[ERROR] [1750143986.462122467] [PZ27C02404000189.fsm]: Received error message from /AirbotPlay/motor/dm_motor_can_left_7: diagnostic update: motor error code detected
+[INFO] [1750143986.479479198] [PZ27C02404000189.fsm]: Activated controller gpio_controller
+[INFO] [1750143986.479530620] [PZ27C02404000189.fsm]: Activated controller id_controller
+[INFO] [1750143986.479543324] [PZ27C02404000189.fsm]: Activated controller joint_state_broadcaster
+[INFO] [1750143986.485219138] [PZ27C02404000189.fsm]: hardware '_led' state set to unconfigured
+[INFO] [1750143986.485303840] [PZ27C02404000189.fsm]: hardware '_button' state set to unconfigured
+[INFO] [1750143986.496339485] [PZ27C02404000189.fsm]: hardware 'joint6' state set to unconfigured
+[INFO] [1750143986.496384128] [PZ27C02404000189.fsm]: hardware 'joint5' state set to unconfigured
+[INFO] [1750143986.496919530] [PZ27C02404000189.fsm]: hardware 'joint3' state set to unconfigured
+[INFO] [1750143986.496995569] [PZ27C02404000189.fsm]: hardware 'joint2' state set to unconfigured
+[INFO] [1750143986.497321342] [PZ27C02404000189.fsm]: hardware 'eef_gripper_joint' state set to unconfigured
+[INFO] [1750143986.508113461] [PZ27C02404000189.fsm]: hardware 'joint4' state set to unconfigured
+[INFO] [1750143986.508143334] [PZ27C02404000189.fsm]: hardware 'joint1' state set to unconfigured
+[INFO] [1750143986.508165640] [PZ27C02404000189.fsm]: on change_led_color to 17
+[ERROR] [1750143987.508293968] [PZ27C02404000189.fsm]: Received error message from /AirbotPlay/motor/old_dm_motor_can_left_5: diagnostic update: motor error code detected

@@ -1,0 +1,2 @@
+[WARN] [1750934205.176965755] [PZ27C02404000166.servo_node]: Could not enable FIFO RT scheduling policy. Continuing with the default.
+[WARN] [1750934205.177858816] [PZ27C02404000166.servo_node]: Realtime kernel is recommended for better performance.

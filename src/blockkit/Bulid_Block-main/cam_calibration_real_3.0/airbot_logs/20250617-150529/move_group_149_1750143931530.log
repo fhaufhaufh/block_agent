@@ -1,0 +1,3 @@
+[WARN] [1750143931.666324140] [PZ27C02404000189.moveit.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[ERROR] [1750143931.666398018] [PZ27C02404000189.moveit.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates
+[WARN] [1750143931.840017451] [PZ27C02404000189.moveit.moveit.ros.planning_pipeline]: No planning response adapter names specified.

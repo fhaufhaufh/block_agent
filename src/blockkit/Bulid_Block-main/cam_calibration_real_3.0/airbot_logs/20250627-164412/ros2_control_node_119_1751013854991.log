@@ -1,0 +1,156 @@
+[WARN] [1751013855.147130062] [PZ27C02404000166.controller_manager]: Could not enable FIFO RT scheduling policy: with error number <1>(Operation not permitted). See [https://control.ros.org/master/doc/ros2_control/controller_manager/doc/userdoc.html] for details on how to enable realtime scheduling.
+[WARN] [1751013855.457523931] [PZ27C02404000166.controller_manager.resource_manager]: Importing state interfaces for the hardware '_led' returned no state interfaces.
+[WARN] [1751013859.137587308] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint4]: Waiting for motor configuration to be synced ...
+[WARN] [1751013859.260753492] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint4]: Waiting for motor state to be synced ...
+[WARN] [1751013859.363660896] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint1]: Waiting for motor configuration to be synced ...
+[WARN] [1751013859.542927246] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[WARN] [1751013859.548789578] [PZ27C02404000166.joint_trajectory_position_controller]: [deprecated] 'open_loop_control' parameter is deprecated. Instead, set the feedback gains to zero and use 'interpolate_from_desired_state' parameter
+[WARN] [1751013859.558066467] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[WARN] [1751013859.572301071] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.eef_gripper_joint]: Waiting for mode change ...
+[WARN] [1751013859.585172435] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1751013859.585201419] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1751013859.585232090] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1751013859.585236230] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1751013859.585240455] [PZ27C02404000166.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1751013859.585243651] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1751013859.585246810] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1751013859.585250494] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1751013866.190712855] [PZ27C02404000166.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1751013866.190738562] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1751013866.190774020] [PZ27C02404000166.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1751013866.190777726] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1751013866.190781518] [PZ27C02404000166.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1751013866.190784988] [PZ27C02404000166.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1751013866.190788666] [PZ27C02404000166.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1751013866.190792026] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1751013866.190798188] [PZ27C02404000166.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1751013866.190801586] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1751013866.192624265] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint4]: Waiting for mode change ...
+[WARN] [1751013866.192649011] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint5]: Waiting for mode change ...
+[WARN] [1751013866.192656916] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint6]: Waiting for mode change ...
+[WARN] [1751013868.424176078] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint1]: no response, jittering (11 / 125) ...
+[WARN] [1751013868.424229434] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint4]: no response, jittering (11 / 125) ...
+[ERROR] [1751013868.884181263] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint1]: no response confirmed (126 / 125), enter error ...
+[ERROR] [1751013868.884272125] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint2]: no response confirmed (126 / 125), enter error ...
+[ERROR] [1751013868.884284642] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint3]: no response confirmed (126 / 125), enter error ...
+[ERROR] [1751013868.884296033] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint4]: no response confirmed (126 / 125), enter error ...
+[ERROR] [1751013868.884306247] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint5]: no response confirmed (126 / 125), enter error ...
+[ERROR] [1751013868.884315028] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.joint6]: no response confirmed (126 / 125), enter error ...
+[ERROR] [1751013868.884325788] [PZ27C02404000166.controller_manager.resource_manager.hardware_component.actuator.eef_gripper_joint]: no response confirmed (126 / 125), enter error ...
+[ERROR] [1751013868.884346133] [PZ27C02404000166.controller_manager]: Deactivating following hardware components as their read cycle resulted in an error: [ joint1 joint2 joint3 joint4 joint5 joint6 eef_gripper_joint ]
+[ERROR] [1751013868.884352694] [PZ27C02404000166.controller_manager]: Deactivating following controllers as their hardware components read cycle resulted in an error: [ joint_state_broadcaster id_controller joint_trajectory_position_controller gravity_compensation_controller joint_state_broadcaster id_controller joint_trajectory_position_controller gravity_compensation_controller joint_state_broadcaster id_controller joint_trajectory_position_controller gravity_compensation_controller joint_state_broadcaster id_controller joint_trajectory_position_controller gravity_compensation_controller joint_state_broadcaster id_controller joint_trajectory_position_controller gravity_compensation_controller joint_state_broadcaster id_controller joint_trajectory_position_controller gravity_compensation_controller gripper_mapping_controller joint_state_broadcaster ]
+[WARN] [1751013870.025025451] [PZ27C02404000166.controller_manager]: Controller with name 'gripper_mapping_controller' can not be deactivated since it is not active.
+[WARN] [1751013870.025055398] [PZ27C02404000166.controller_manager]: Could not deactivate controller with name 'gripper_mapping_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[ERROR] [1751013870.026771276] [PZ27C02404000166.controller_manager.resource_manager]: Not acceptable command interfaces combination: 
+Start interfaces: 
+[
+]
+Stop interfaces: 
+[
+  gripper_mapping_controller/position
+  gripper_mapping_controller/velocity
+  gripper_mapping_controller/effort
+  gripper_mapping_controller/mit_kp
+  gripper_mapping_controller/mit_kd
+]
+Not available: 
+[
+ gripper_mapping_controller/position
+ gripper_mapping_controller/velocity
+ gripper_mapping_controller/effort
+ gripper_mapping_controller/mit_kp
+ gripper_mapping_controller/mit_kd
+]
+
+[ERROR] [1751013870.026808097] [PZ27C02404000166.controller_manager]: Could not switch controllers since prepare command mode switch was rejected.
+[WARN] [1751013890.298967872] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299005076] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299009714] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299013261] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299016502] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299020452] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299023616] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299027044] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299030782] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299033881] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299037480] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299040739] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.299043433] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint6'): 'joint6/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315168796] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315197895] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315202007] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315205179] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315208879] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315212285] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315245512] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315251471] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315256132] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315260791] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315266205] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315270456] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.315275037] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint5'): 'joint5/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334748448] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334799516] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334806308] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334812047] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334817531] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334822706] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334827706] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334833372] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334839241] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334843635] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334848284] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334903278] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.334909734] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint3'): 'joint3/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354563173] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354592875] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354597728] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354602816] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354607179] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354611325] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354616149] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354621351] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354626335] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354630369] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354634609] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354638951] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.354643722] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint2'): 'joint2/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372168975] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372209595] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372214474] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372218230] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372251719] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372256222] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372260371] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372264563] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372268380] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372271799] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372275529] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372278671] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.372282718] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'eef_gripper_joint'): 'eef_gripper_joint/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386644645] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386673903] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386678271] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386681633] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386685339] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386688406] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386691979] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386695205] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386723321] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386727484] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386731198] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386734221] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.386737618] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint4'): 'joint4/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403425634] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/position' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403453604] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/velocity' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403457741] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403460966] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/mit_kd' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403464001] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/reference_effort' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403467552] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/mit_kp' command interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403470932] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/reference_effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403474009] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/error_id' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403477220] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/mos_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403480652] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/position' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403483580] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/velocity' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403486420] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/effort' state interface not in available list. This should not happen (hint: multiple cleanup calls).
+[WARN] [1751013890.403489712] [PZ27C02404000166.controller_manager.resource_manager]: (hardware 'joint1'): 'joint1/motor_temperature' state interface not in available list. This should not happen (hint: multiple cleanup calls).

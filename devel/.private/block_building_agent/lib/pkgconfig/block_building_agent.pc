@@ -1,0 +1,8 @@
+prefix=/home/ytm/block_agent/devel/.private/block_building_agent
+
+Name: block_building_agent
+Description: Description of block_building_agent
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs

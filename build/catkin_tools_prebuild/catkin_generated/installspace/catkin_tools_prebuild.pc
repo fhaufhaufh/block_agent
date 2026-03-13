@@ -1,4 +1,4 @@
-prefix=/home/ytm/ytm_space/install
+prefix=/home/ytm/block_agent/install
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

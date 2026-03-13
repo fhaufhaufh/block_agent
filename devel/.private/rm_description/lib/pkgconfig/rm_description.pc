@@ -1,8 +1,0 @@
-prefix=/home/ytm/ytm_space/devel/.private/rm_description
-
-Name: rm_description
-Description: Description of rm_description
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,1 +1,0 @@
-/home/ytm/ytm_space/devel/.private/rm_msgs/include/rm_msgs/Hand_Posture.h

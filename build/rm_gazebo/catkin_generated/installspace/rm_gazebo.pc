@@ -1,8 +1,0 @@
-prefix=/home/ytm/ytm_space/install
-
-Name: rm_gazebo
-Description: Description of rm_gazebo
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

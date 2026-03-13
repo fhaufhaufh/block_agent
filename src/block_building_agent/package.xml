@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>block_building_agent</name>
+  <version>0.1.0</version>
+  <description>Multi-agent system for block construction planning using LangGraph</description>
+  
+  <maintainer email="ytm@todo.todo">ytm</maintainer>
+  <license>MIT</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <!-- ROS 依赖 -->
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  
+  <export>
+  </export>
+</package>

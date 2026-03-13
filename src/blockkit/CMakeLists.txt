@@ -164,6 +164,8 @@ catkin_install_python(PROGRAMS
   scripts/vi_catch_yolov11.py
   scripts/catch.py
   scripts/pose.py
+  scripts/angle.py
+  scripts/qwen3_VL.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

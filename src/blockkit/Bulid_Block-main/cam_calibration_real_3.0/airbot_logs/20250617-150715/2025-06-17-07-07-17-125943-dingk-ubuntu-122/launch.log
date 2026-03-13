@@ -1,0 +1,59 @@
+1750144037.1265340 [INFO] [launch]: All log files can be found below /userdata/2025-06-17-07-07-17-125943-dingk-ubuntu-122
+1750144037.1266232 [INFO] [launch]: Default logging verbosity is set to INFO
+1750144037.8035624 [INFO] [server_node-1]: process started with pid [129]
+1750144037.8037915 [INFO] [ros2_control_node-2]: process started with pid [131]
+1750144037.8039000 [INFO] [spawner-3]: process started with pid [133]
+1750144037.8039777 [INFO] [spawner-4]: process started with pid [135]
+1750144037.8040464 [INFO] [spawner-5]: process started with pid [137]
+1750144037.8041201 [INFO] [spawner-6]: process started with pid [139]
+1750144037.8041868 [INFO] [spawner-7]: process started with pid [141]
+1750144037.8042505 [INFO] [spawner-8]: process started with pid [143]
+1750144037.8043139 [INFO] [spawner-9]: process started with pid [145]
+1750144037.8043756 [INFO] [robot_state_publisher-10]: process started with pid [147]
+1750144037.8044424 [INFO] [move_group-11]: process started with pid [149]
+1750144037.8045053 [INFO] [servo_node-12]: process started with pid [151]
+1750144037.8045704 [INFO] [server-13]: process started with pid [153]
+1750144037.8046343 [INFO] [aggregator_node-14]: process started with pid [155]
+1750144037.8046920 [INFO] [spawner-15]: process started with pid [157]
+1750144037.8047521 [INFO] [spawner-16]: process started with pid [159]
+1750144037.8048129 [INFO] [spawner-17]: process started with pid [161]
+1750144037.8048706 [INFO] [component_container_mt-18]: process started with pid [163]
+1750144037.9328237 [server-13] 1750144037.932564 [199]     server: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144037.9898350 [servo_node-12] 1750144037.989468 [199] servo_node: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144037.9994352 [servo_node-12] [33m[WARN] [1750144037.999161013] [PZ27C02404000189.servo_node]: Could not enable FIFO RT scheduling policy. Continuing with the default.[0m
+1750144037.9998918 [servo_node-12] [33m[WARN] [1750144037.999236653] [PZ27C02404000189.servo_node]: Realtime kernel is recommended for better performance.[0m
+1750144038.1219876 [spawner-4] 1750144038.121626 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144038.1225445 [spawner-8] 1750144038.121911 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144038.1322732 [spawner-15] 1750144038.132020 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144038.1643572 [spawner-17] 1750144038.164117 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144038.1673901 [spawner-9] 1750144038.167031 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144038.2034817 [spawner-16] 1750144038.203153 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144038.2324560 [spawner-6] 1750144038.232008 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144038.2377033 [spawner-3] 1750144038.237421 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144038.2875044 [spawner-5] 1750144038.287244 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144038.2905576 [spawner-7] 1750144038.290301 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750144038.4536197 [INFO] [spawner-8]: process has finished cleanly [pid 143]
+1750144038.4570878 [INFO] [spawner-4]: process has finished cleanly [pid 135]
+1750144038.5425429 [INFO] [spawner-16]: process has finished cleanly [pid 159]
+1750144038.5476344 [INFO] [spawner-15]: process has finished cleanly [pid 157]
+1750144038.5488679 [INFO] [spawner-17]: process has finished cleanly [pid 161]
+1750144038.5489609 [INFO] [spawner-9]: process has finished cleanly [pid 145]
+1750144038.6645894 [INFO] [spawner-6]: process has finished cleanly [pid 139]
+1750144038.6650205 [INFO] [spawner-3]: process has finished cleanly [pid 133]
+1750144038.6706915 [INFO] [spawner-5]: process has finished cleanly [pid 137]
+1750144038.6716652 [INFO] [spawner-7]: process has finished cleanly [pid 141]
+1750144042.0615716 [servo_node-12] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+1750144042.0617557 [servo_node-12]          at line 127 in /root/ros2_ws/src/deps/ros/class_loader/src/class_loader.cpp
+1750144621.9933691 [server-13] [31m[ERROR] [1750144621.992953848] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144623.0422723 [server-13] [31m[ERROR] [1750144623.042016829] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144624.1092238 [server-13] [31m[ERROR] [1750144624.108967993] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144625.1759973 [server-13] [31m[ERROR] [1750144625.175758970] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144626.2334874 [server-13] [31m[ERROR] [1750144626.233264706] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144627.2802315 [server-13] [31m[ERROR] [1750144627.280011496] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144628.3259797 [server-13] [31m[ERROR] [1750144628.325721412] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144629.3923995 [server-13] [31m[ERROR] [1750144629.392166782] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144630.4588974 [server-13] [31m[ERROR] [1750144630.458625319] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144631.5261934 [server-13] [31m[ERROR] [1750144631.525935213] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144632.5927918 [server-13] [31m[ERROR] [1750144632.592434560] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144633.6423447 [server-13] [31m[ERROR] [1750144633.642100326] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m
+1750144634.7034869 [server-13] [31m[ERROR] [1750144634.703194644] [PZ27C02404000189.sdk_server]: Current control_mode: 98[0m

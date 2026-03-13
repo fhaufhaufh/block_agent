@@ -1,0 +1,4 @@
+Symlinking /home/ytm/block_agent/devel/share/block_building_agent/cmake/block_building_agentConfig.cmake
+Symlinking /home/ytm/block_agent/devel/share/block_building_agent/cmake/block_building_agentConfig-version.cmake
+Symlinking /home/ytm/block_agent/devel/lib/pkgconfig/block_building_agent.pc
+Symlinking /home/ytm/block_agent/devel/lib/block_building_agent/planning_node.py

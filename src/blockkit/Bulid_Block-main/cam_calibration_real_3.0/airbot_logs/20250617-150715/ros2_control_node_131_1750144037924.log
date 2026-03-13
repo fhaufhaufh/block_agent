@@ -1,0 +1,114 @@
+[WARN] [1750144038.032608283] [PZ27C02404000189.controller_manager]: Could not enable FIFO RT scheduling policy: with error number <1>(Operation not permitted). See [https://control.ros.org/master/doc/ros2_control/controller_manager/doc/userdoc.html] for details on how to enable realtime scheduling.
+[WARN] [1750144038.100474684] [PZ27C02404000189.controller_manager.resource_manager]: Importing state interfaces for the hardware '_led' returned no state interfaces.
+[WARN] [1750144041.618318063] [PZ27C02404000189.controller_manager.resource_manager.hardware_component.actuator.joint4]: Waiting for motor configuration to be synced ...
+[WARN] [1750144041.985846552] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[WARN] [1750144041.997512189] [PZ27C02404000189.joint_trajectory_position_controller]: [deprecated] 'open_loop_control' parameter is deprecated. Instead, set the feedback gains to zero and use 'interpolate_from_desired_state' parameter
+[WARN] [1750144042.012265973] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[WARN] [1750144042.024920801] [PZ27C02404000189.controller_manager.resource_manager.hardware_component.actuator.eef_gripper_joint]: Waiting for mode change ...
+[WARN] [1750144042.038953427] [PZ27C02404000189.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144042.039003875] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144042.039075855] [PZ27C02404000189.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750144042.039088047] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144042.039118310] [PZ27C02404000189.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750144042.039129886] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144042.039143329] [PZ27C02404000189.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750144042.039156260] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144166.765009596] [PZ27C02404000189.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144166.765059130] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144166.765137695] [PZ27C02404000189.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144166.765152165] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144166.765165073] [PZ27C02404000189.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144166.765175804] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144166.765187959] [PZ27C02404000189.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750144166.765198789] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144166.765215050] [PZ27C02404000189.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750144166.765226791] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144249.238576445] [PZ27C02404000189.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144249.238608826] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144249.238618726] [PZ27C02404000189.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144249.238624358] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144249.238630743] [PZ27C02404000189.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144249.238635616] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144249.238656802] [PZ27C02404000189.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750144249.238663467] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144249.238671008] [PZ27C02404000189.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750144249.238676323] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144362.726392892] [PZ27C02404000189.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144362.726429361] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144362.726441397] [PZ27C02404000189.controller_manager]: Controller with name 'id_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144362.726446484] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'id_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144362.726452379] [PZ27C02404000189.controller_manager]: Controller with name 'joint_state_broadcaster' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144362.726456974] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'joint_state_broadcaster'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144362.726462597] [PZ27C02404000189.controller_manager]: Controller with name 'joint_trajectory_position_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750144362.726467823] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144362.726473610] [PZ27C02404000189.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750144362.726479194] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144362.726485258] [PZ27C02404000189.controller_manager]: Controller with name 'gravity_compensation_controller' can not be deactivated since it is not active.
+[WARN] [1750144362.726490090] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'gravity_compensation_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750144362.726500661] [PZ27C02404000189.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750144362.726505374] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[ERROR] [1750144619.900836961] [PZ27C02404000189.controller_manager.resource_manager.hardware_component.actuator.joint5]: motor joint5 is over temperature, current temperature is 81.000000
+[ERROR] [1750144619.900994277] [PZ27C02404000189.controller_manager]: Deactivating following hardware components as their read cycle resulted in an error: [ joint5 ]
+[ERROR] [1750144619.901017499] [PZ27C02404000189.controller_manager]: Deactivating following controllers as their hardware components read cycle resulted in an error: [ joint_trajectory_position_controller id_controller joint_state_broadcaster gravity_compensation_controller ]
+[WARN] [1750145062.288298964] [PZ27C02404000189.controller_manager]: Controller with name 'gpio_controller' is not inactive so its following controllers do not have to be checked, because it cannot be activated.
+[WARN] [1750145062.288328767] [PZ27C02404000189.controller_manager]: Could not activate controller with name 'gpio_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750145062.288382069] [PZ27C02404000189.controller_manager]: Controller with name 'forward_position_controller' can not be deactivated since it is not active.
+[WARN] [1750145062.288387153] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'forward_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750145062.288391677] [PZ27C02404000189.controller_manager]: Controller with name 'joint_trajectory_position_controller' can not be deactivated since it is not active.
+[WARN] [1750145062.288395356] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'joint_trajectory_position_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[WARN] [1750145062.288399977] [PZ27C02404000189.controller_manager]: Controller with name 'robot_tracking_controller' can not be deactivated since it is not active.
+[WARN] [1750145062.288403579] [PZ27C02404000189.controller_manager]: Could not deactivate controller with name 'robot_tracking_controller'. Check above warnings for more details. Check the state of the controllers and their required interfaces using `ros2 control list_controllers -v` CLI to get more information.
+[ERROR] [1750145062.288513062] [PZ27C02404000189.controller_manager.resource_manager]: Not acceptable command interfaces combination: 
+Start interfaces: 
+[
+  joint1/reference_effort
+  joint2/reference_effort
+  joint3/reference_effort
+  joint4/reference_effort
+  joint5/reference_effort
+  joint6/reference_effort
+  joint1/position
+  joint1/velocity
+  joint1/effort
+  joint1/mit_kp
+  joint1/mit_kd
+  joint2/position
+  joint2/velocity
+  joint2/effort
+  joint2/mit_kp
+  joint2/mit_kd
+  joint3/position
+  joint3/velocity
+  joint3/effort
+  joint3/mit_kp
+  joint3/mit_kd
+  joint4/position
+  joint4/velocity
+  joint4/effort
+  joint4/mit_kp
+  joint4/mit_kd
+  joint5/position
+  joint5/velocity
+  joint5/effort
+  joint5/mit_kp
+  joint5/mit_kd
+  joint6/position
+  joint6/velocity
+  joint6/effort
+  joint6/mit_kp
+  joint6/mit_kd
+]
+Stop interfaces: 
+[
+]
+Not available: 
+[
+ joint5/reference_effort
+ joint5/position
+ joint5/velocity
+ joint5/effort
+ joint5/mit_kp
+ joint5/mit_kd
+]
+
+[ERROR] [1750145062.288562135] [PZ27C02404000189.controller_manager]: Could not switch controllers since prepare command mode switch was rejected.

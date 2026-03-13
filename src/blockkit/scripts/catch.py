@@ -39,7 +39,7 @@ is_executing = False
 tasks_completed = False
 
 # 相机坐标系物体到机械臂基坐标系转换函数
-def convert(x, y, z, x1, y1, z1, rx, ry, rz):
+def convert(x, y, z, x1, y1, z1, rx, ry, rz, obj_angle_cam=None):
     """
     函数功能：我们需要将旋转向量和平移向量转换为齐次变换矩阵，然后使用深度相机识别到的物体坐标（x, y, z）和
     机械臂末端的位姿（x1,y1,z1,rx,ry,rz）来计算物体相对于机械臂基座的位姿（x, y, z, rx, ry, rz）
@@ -68,12 +68,26 @@ def convert(x, y, z, x1, y1, z1, rx, ry, rz):
     obj_end_effector_coordinates_homo = T_camera_to_end_effector.dot(obj_camera_coordinates_homo)
     obj_base_coordinates_homo = T_base_to_end_effector.dot(obj_end_effector_coordinates_homo)
     obj_base_coordinates = obj_base_coordinates_homo[:3]  # 从齐次坐标中提取物体的x, y, z坐标
-    # 计算物体的旋转
+    # 计算物体的旋转（若提供来自相机的角度，则将其作为绕相机z的yaw并转换到基座）
     obj_orientation_matrix = T_base_to_end_effector[:3, :3].dot(rotation_matrix)
     obj_orientation_euler = R.from_matrix(obj_orientation_matrix).as_euler('xyz', degrees=False)
-    # 组合结果
+
+    # 如果提供了相机系下的角度（弧度），将其作为绕相机 z 轴的 yaw，转换为基座系的 yaw
+    if obj_angle_cam is not None:
+        # 构造相机系下的旋转（绕相机z）
+        r_obj_cam = R.from_euler('z', obj_angle_cam, degrees=False)
+        # 相机->末端，通过 T_camera_to_end_effector 的旋转矩阵 rotation_matrix
+        # 物体在末端坐标系的旋转为 R_end = R_base_to_end_effector^{-1} * R_base_camera * R_obj_cam
+        # 为简化：直接将相机系角度转换到基座系：r_base_obj = R_base_to_end_effector * rotation_matrix * r_obj_cam
+        # 首先构造相机->base 的旋转： R_camera_to_end = Rotation(rotation_matrix)
+        R_camera_to_end = R.from_matrix(rotation_matrix)
+        r_base_obj = R.from_matrix(T_base_to_end_effector[:3, :3]).dot(R_camera_to_end * r_obj_cam)
+        # 将其转换为欧拉
+        obj_euler_base = r_base_obj.as_euler('xyz', degrees=False)
+        obj_orientation_euler = obj_euler_base
+
+    # 组合结果：位置 + 旋转（基座系）
     obj_base_pose = np.hstack((obj_base_coordinates, obj_orientation_euler))
-    obj_base_pose[3:] = rx, ry, rz
     return obj_base_pose
 
 # 接收到识别物体的回调函数
@@ -105,11 +119,12 @@ def object_pose_callback(data):
             # 2. 计算机械臂基坐标系下的物体坐标
             result = convert(data.x, data.y, data.z,
                              arm_pose_msg.Pose[0], arm_pose_msg.Pose[1], arm_pose_msg.Pose[2],
-                             arm_pose_msg.Pose[3], arm_pose_msg.Pose[4], arm_pose_msg.Pose[5])
+                             arm_pose_msg.Pose[3], arm_pose_msg.Pose[4], arm_pose_msg.Pose[5],
+                             obj_angle_cam=(getattr(data, 'angle', None) if hasattr(data, 'angle') else None))
             print(f"Target {data.object_class} converted pose in base frame: {result[:3]}")
 
             # 3. 执行抓取-放置动作
-            success = catch_and_place(result, arm_orientation_msg, current_task['target_place'])
+            success = catch_and_place(result, arm_orientation_msg, current_task['target_place'], obj_angle= (getattr(data, 'angle', None) if hasattr(data, 'angle') else None))
             if success:
                 print(f"Successfully handled task for {current_task['target_class']}")
 
@@ -232,7 +247,7 @@ def arm_ready_pose():
         return False
 
 
-def catch_and_place(obj_pose_in_base, arm_orientation_msg, target_place_pose):
+def catch_and_place(obj_pose_in_base, arm_orientation_msg, target_place_pose, obj_angle=None):
     """
     函数功能：执行抓取-移动-放置的完整流程。
     输入参数：
@@ -244,20 +259,49 @@ def catch_and_place(obj_pose_in_base, arm_orientation_msg, target_place_pose):
     try:
         print('Starting catch-and-place sequence...')
         
-        # --- Step 1: 移动到预抓取位置 ---
+    # --- Step 1: 移动到预抓取位置 ---
 
         print(f'  Moving to object near: {obj_pose_in_base[:3]}')
 
         approach_offset = 0.07
 
+        # 如果 obj_pose_in_base 中包含 orientation（rx,ry,rz），将其用于计算目标末端四元数的 yaw
+        target_quat = [
+            arm_orientation_msg.Pose.orientation.x,
+            arm_orientation_msg.Pose.orientation.y,
+            arm_orientation_msg.Pose.orientation.z,
+            arm_orientation_msg.Pose.orientation.w,
+        ]
+
+        try:
+            # obj_pose_in_base 末尾三个元素为 euler (rx,ry,rz)
+            obj_euler = obj_pose_in_base[3:6]
+            # 计算目标 yaw (基座系) 使用 obj_euler 的 yaw (rz)
+            target_yaw = float(obj_euler[2])
+            # 保留当前 arm 的 roll, pitch
+            current_r = R.from_quat([arm_orientation_msg.Pose.orientation.x,
+                                     arm_orientation_msg.Pose.orientation.y,
+                                     arm_orientation_msg.Pose.orientation.z,
+                                     arm_orientation_msg.Pose.orientation.w])
+            current_r_euler = current_r.as_euler('xyz', degrees=False)
+            roll = current_r_euler[0]
+            pitch = current_r_euler[1]
+            # 组合成新的末端欧拉（roll, pitch, target_yaw）并转四元数
+            new_r = R.from_euler('xyz', [roll, pitch, target_yaw], degrees=False)
+            q_new = new_r.as_quat()
+            target_quat = [float(q_new[0]), float(q_new[1]), float(q_new[2]), float(q_new[3])]
+        except Exception:
+            # 回退到当前 arm 四元数
+            pass
+
         if not movejp_type([
             obj_pose_in_base[0],
             obj_pose_in_base[1],
             obj_pose_in_base[2]+ approach_offset,
-            arm_orientation_msg.Pose.orientation.x,
-            arm_orientation_msg.Pose.orientation.y,
-            arm_orientation_msg.Pose.orientation.z,
-            arm_orientation_msg.Pose.orientation.w
+            target_quat[0],
+            target_quat[1],
+            target_quat[2],
+            target_quat[3]
         ], 0.3):
             rospy.logerr("Failed to move near object.")
             return False

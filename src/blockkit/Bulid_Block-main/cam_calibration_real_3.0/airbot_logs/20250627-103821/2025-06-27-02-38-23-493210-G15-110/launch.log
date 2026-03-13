@@ -1,0 +1,46 @@
+1750991903.4940798 [INFO] [launch]: All log files can be found below /userdata/2025-06-27-02-38-23-493210-G15-110
+1750991903.4942133 [INFO] [launch]: Default logging verbosity is set to INFO
+1750991904.4488423 [INFO] [server_node-1]: process started with pid [117]
+1750991904.4494464 [INFO] [ros2_control_node-2]: process started with pid [119]
+1750991904.4498591 [INFO] [spawner-3]: process started with pid [121]
+1750991904.4502499 [INFO] [spawner-4]: process started with pid [123]
+1750991904.4506269 [INFO] [spawner-5]: process started with pid [125]
+1750991904.4509964 [INFO] [spawner-6]: process started with pid [127]
+1750991904.4513872 [INFO] [spawner-7]: process started with pid [129]
+1750991904.4517431 [INFO] [spawner-8]: process started with pid [131]
+1750991904.4521067 [INFO] [spawner-9]: process started with pid [133]
+1750991904.4524667 [INFO] [robot_state_publisher-10]: process started with pid [135]
+1750991904.4528282 [INFO] [move_group-11]: process started with pid [137]
+1750991904.4531817 [INFO] [servo_node-12]: process started with pid [139]
+1750991904.4535301 [INFO] [server-13]: process started with pid [141]
+1750991904.4538822 [INFO] [aggregator_node-14]: process started with pid [143]
+1750991904.4542618 [INFO] [spawner-15]: process started with pid [145]
+1750991904.4546590 [INFO] [spawner-16]: process started with pid [151]
+1750991904.4550464 [INFO] [spawner-17]: process started with pid [155]
+1750991904.4553998 [INFO] [component_container_mt-18]: process started with pid [166]
+1750991904.5191524 [server-13] 1750991904.518788 [199]     server: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991904.5873861 [servo_node-12] 1750991904.586999 [199] servo_node: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991904.6482131 [servo_node-12] [33m[WARN] [1750991904.647810652] [PZ27C02404000166.servo_node]: Could not enable FIFO RT scheduling policy. Continuing with the default.[0m
+1750991904.6495569 [servo_node-12] [33m[WARN] [1750991904.647973410] [PZ27C02404000166.servo_node]: Realtime kernel is recommended for better performance.[0m
+1750991905.0135868 [spawner-6] 1750991905.013116 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991905.0147457 [spawner-7] 1750991905.013114 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991905.0151403 [spawner-5] 1750991905.013407 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991905.0154860 [spawner-3] 1750991905.013635 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991905.0189815 [spawner-4] 1750991905.018591 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991905.0271766 [spawner-9] 1750991905.026763 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991905.0524430 [spawner-16] 1750991905.052095 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991905.0562670 [spawner-8] 1750991905.055870 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991905.0635951 [spawner-15] 1750991905.063260 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991905.2144051 [spawner-17] 1750991905.214076 [199]    spawner: config: //CycloneDDS/Domain/General: 'NetworkInterfaceAddress': deprecated element (file:///root/cyclonedds.xml line 8)
+1750991905.5056353 [INFO] [spawner-7]: process has finished cleanly [pid 129]
+1750991905.5106304 [INFO] [spawner-9]: process has finished cleanly [pid 133]
+1750991905.5946071 [INFO] [spawner-6]: process has finished cleanly [pid 127]
+1750991905.6099193 [INFO] [spawner-16]: process has finished cleanly [pid 151]
+1750991905.6113822 [INFO] [spawner-5]: process has finished cleanly [pid 125]
+1750991905.6122277 [INFO] [spawner-4]: process has finished cleanly [pid 123]
+1750991905.6132145 [INFO] [spawner-15]: process has finished cleanly [pid 145]
+1750991905.6918716 [INFO] [spawner-3]: process has finished cleanly [pid 121]
+1750991905.6924388 [INFO] [spawner-8]: process has finished cleanly [pid 131]
+1750991905.7077482 [INFO] [spawner-17]: process has finished cleanly [pid 155]
+1750991909.1653421 [servo_node-12] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+1750991909.1655450 [servo_node-12]          at line 127 in /root/ros2_ws/src/deps/ros/class_loader/src/class_loader.cpp

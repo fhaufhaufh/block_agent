@@ -1,1 +1,0 @@
-/home/ytm/ytm_space/devel/.private/blockkit/include/blockkit/ObjectInfo.h

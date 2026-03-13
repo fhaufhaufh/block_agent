@@ -1,1 +1,0 @@
-/home/ytm/ytm_space/devel/.private/blockkit/share/roseus/ros/blockkit/manifest.l

@@ -1,6 +1,6 @@
-devel_space: /home/ytm/ytm_space/devel
+devel_space: /home/ytm/block_agent/devel
 install: false
-install_space: /home/ytm/ytm_space/install
+install_space: /home/ytm/block_agent/install
 profile: default
-source_space: /home/ytm/ytm_space/src
-workspace: /home/ytm/ytm_space
+source_space: /home/ytm/block_agent/src
+workspace: /home/ytm/block_agent
