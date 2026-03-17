@@ -1,0 +1,1 @@
+/home/ytm/block_agent/devel/.private/blockkit/lib/python3/dist-packages/blockkit/msg/_ObjectInfo.py

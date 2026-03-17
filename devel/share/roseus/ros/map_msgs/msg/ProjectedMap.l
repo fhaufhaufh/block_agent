@@ -1,0 +1,1 @@
+/home/ytm/block_agent/devel/.private/map_msgs/share/roseus/ros/map_msgs/msg/ProjectedMap.l

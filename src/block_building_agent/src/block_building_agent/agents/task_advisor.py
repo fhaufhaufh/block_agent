@@ -85,6 +85,41 @@ def _serialize_tasks(tasks):
     return serialized_tasks
 
 
+def _to_robot_tasks(assembly_tasks: List[dict]) -> List[dict]:
+    """将装配级任务（task_id/required_class/target_pose/...）转换为 planning_node 期望的 RobotTask 字段。"""
+    robot_tasks: List[dict] = []
+    for i, t in enumerate(assembly_tasks):
+        # target_pose: [x,y,z,qx,qy,qz,qw]
+        pose = t.get("target_pose") or [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+        if not (isinstance(pose, list) and len(pose) >= 7):
+            pose = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+
+        target_position = [float(pose[0]), float(pose[1]), float(pose[2])]
+        target_posture = [float(pose[3]), float(pose[4]), float(pose[5]), float(pose[6])]
+
+        task_id = t.get("task_id") if isinstance(t.get("task_id"), int) else (i + 1)
+        level = t.get("target_level") if isinstance(t.get("target_level"), int) else 1
+
+        depends_on = t.get("depends_on", [])
+        if depends_on is None:
+            depends_on = []
+        if not isinstance(depends_on, list):
+            depends_on = []
+
+        robot_tasks.append({
+            "step": task_id,
+            # 这里先输出一个可执行的通用动作名，后续 action_planner 会进一步细化
+            "action": "pick_and_place",
+            "class_type": str(t.get("required_class", "unknown")),
+            "target_level": level,
+            "target_position": target_position,
+            "target_posture": target_posture,
+            # state.py 里 depends_on 是 List[int]（依赖 step 编号）
+            "depends_on": [int(x) for x in depends_on if isinstance(x, int) or (isinstance(x, str) and x.isdigit())],
+        })
+    return robot_tasks
+
+
 def _fallback_generate_tasks(plan):
     """
     当 LLM 解析失败时，使用规则回退，直接从搭建计划生成装配级任务。
@@ -138,7 +173,10 @@ def task_advisor_node(state: dict):
             "format_instructions": parser.get_format_instructions(),
         })
 
-        serialized_tasks = _serialize_tasks(result.tasks)
+        # 1) 先得到装配级任务（task_id/required_class/target_pose/...）
+        assembly_tasks = _serialize_tasks(result.tasks)
+        # 2) 转换为 planning_node/state.py 期望的 RobotTask schema
+        serialized_tasks = _to_robot_tasks(assembly_tasks)
 
         try:
             print(f"[task_advisor] produced assembly tasks len={len(serialized_tasks)}")
@@ -153,7 +191,9 @@ def task_advisor_node(state: dict):
         }
 
     except Exception as e:
-        fallback_tasks = _fallback_generate_tasks(plan)
+        # fallback 同样先生成装配级任务，再转 RobotTask
+        fallback_assembly_tasks = _fallback_generate_tasks(plan)
+        fallback_tasks = _to_robot_tasks(fallback_assembly_tasks)
         return {
             "current_task_sequence": fallback_tasks,
             "task_advisor_feedback": f"task_advisor 解析失败，已使用规则回退: {str(e)}",

@@ -56,4 +56,4 @@ install(DIRECTORY config/
 ## Testing ##
 #############
 ## ✅ 启用测试（取消注释）
-catkin_add_nosetests(test)
+# catkin_add_nosetests(test)

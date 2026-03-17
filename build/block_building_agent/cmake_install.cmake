@@ -171,7 +171,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/block_building_agent" TYPE DIRECTORY FILES "/home/ytm/block_agent/src/block_building_agent/src/block_building_agent/" FILES_MATCHING REGEX "/[^/]*\\.py$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/block_building_agent" TYPE DIRECTORY FILES "/home/ytm/block_agent/src/block_building_agent/src/block_building_agent/" FILES_MATCHING REGEX "/[^/]*\\.py$" REGEX "/\\.git$" EXCLUDE)
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/block_building_agent/config" TYPE DIRECTORY OPTIONAL FILES "/home/ytm/block_agent/src/block_building_agent/config/")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

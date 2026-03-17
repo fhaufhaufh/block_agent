@@ -1,0 +1,1 @@
+/home/ytm/block_agent/devel/.private/blockkit/share/blockkit/cmake/blockkit-msg-paths.cmake

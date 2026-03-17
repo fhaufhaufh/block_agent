@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ytm/block_agent/devel/.private/rml_63_moveit_config/setup.sh

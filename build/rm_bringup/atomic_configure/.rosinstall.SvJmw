@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ytm/block_agent/devel/.private/rm_bringup/setup.sh

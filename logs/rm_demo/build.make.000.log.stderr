@@ -1,0 +1,96 @@
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rml63_pick_place_demo.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rml63_pick_place_demo.cpp:129:49:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  129 |     moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess[m[K = group.plan(my_plan);
+      |                                                 [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rml63_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rml63_pick_place_demo.cpp:211:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  211 |         moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess2[m[K = group.plan(my_plan2);
+      |                                                     [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rml63_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rml63_pick_place_demo.cpp:264:57:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  264 |             moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess3[m[K = group.plan(my_plan3);
+      |                                                         [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rml63_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm65_pick_place_demo.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm65_pick_place_demo.cpp:129:49:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  129 |     moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess[m[K = group.plan(my_plan);
+      |                                                 [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm65_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm65_pick_place_demo.cpp:211:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  211 |         moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess2[m[K = group.plan(my_plan2);
+      |                                                     [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm65_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm65_pick_place_demo.cpp:264:57:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  264 |             moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess3[m[K = group.plan(my_plan3);
+      |                                                         [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm65_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_eco65_pick_place_demo.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_eco65_pick_place_demo.cpp:129:49:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  129 |     moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess[m[K = group.plan(my_plan);
+      |                                                 [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_eco65_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_eco65_pick_place_demo.cpp:211:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  211 |         moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess2[m[K = group.plan(my_plan2);
+      |                                                     [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_eco65_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_eco65_pick_place_demo.cpp:264:57:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  264 |             moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess3[m[K = group.plan(my_plan3);
+      |                                                         [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_eco65_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/test_api_movel.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/test_api_movel.cpp:87:49:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+   87 |     moveit::planning_interface::MoveItErrorCode [01;35m[KplanResult[m[K;
+      |                                                 [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/test_api_movel.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm75_pick_place_demo.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm75_pick_place_demo.cpp:129:49:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  129 |     moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess[m[K = group.plan(my_plan);
+      |                                                 [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm75_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm75_pick_place_demo.cpp:211:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  211 |         moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess2[m[K = group.plan(my_plan2);
+      |                                                     [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm75_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm75_pick_place_demo.cpp:264:57:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  264 |             moveit::planning_interface::MoveItErrorCode [01;35m[Ksuccess3[m[K = group.plan(my_plan3);
+      |                                                         [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/ytm/block_agent/src/rm_robot/rm_demo/src/api_rm75_pick_place_demo.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K

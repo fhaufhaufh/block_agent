@@ -57,6 +57,46 @@ def _normalize_target_pose(plan_item):
     return position + posture
 
 
+def _coerce_robot_task_to_assembly(task: dict, fallback_task_id: int) -> dict:
+    """兼容 planning_node 的 RobotTask schema：step/class_type/target_position/target_posture -> task_id/required_class/target_pose."""
+    if not isinstance(task, dict):
+        return {}
+
+    # 优先使用 legacy 字段
+    if any(k in task for k in ("task_id", "required_class", "target_pose")):
+        return task
+
+    step = task.get("step", fallback_task_id)
+    try:
+        step = int(step)
+    except Exception:
+        step = fallback_task_id
+
+    required_class = task.get("class_type", "unknown")
+    required_class = str(required_class)
+
+    pos = task.get("target_position") or [0.0, 0.0, 0.0]
+    post = task.get("target_posture") or [0.0, 0.0, 0.0, 1.0]
+    if not (isinstance(pos, list) and len(pos) >= 3):
+        pos = [0.0, 0.0, 0.0]
+    if not (isinstance(post, list) and len(post) >= 4):
+        post = [0.0, 0.0, 0.0, 1.0]
+
+    # RobotTask 没有 selection_rule，这里给一个默认值避免因缺失直接判错
+    selection_rule = task.get("selection_rule")
+    if not isinstance(selection_rule, str) or not selection_rule.strip():
+        selection_rule = f"choose any reachable block of class {required_class} from tabletop"
+
+    return {
+        "task_id": step,
+        "required_class": required_class,
+        "target_pose": [float(pos[0]), float(pos[1]), float(pos[2]), float(post[0]), float(post[1]), float(post[2]), float(post[3])],
+        "target_level": task.get("target_level"),
+        "depends_on": task.get("depends_on", []),
+        "selection_rule": selection_rule,
+    }
+
+
 def _rule_validate(tasks, plan):
     errors = []
     suggestions = []
@@ -68,7 +108,8 @@ def _rule_validate(tasks, plan):
         errors.append(f"任务数应为 {len(plan)}，实际为 {len(tasks)}")
         suggestions.append("请确保每个搭建计划项恰好对应一个任务")
 
-    for i, task in enumerate(tasks):
+    for i, raw_task in enumerate(tasks):
+        task = _coerce_robot_task_to_assembly(raw_task, i + 1)
         expected_task_id = i + 1
         if task.get("task_id") != expected_task_id:
             errors.append(
@@ -137,13 +178,14 @@ def task_validator_node(state: dict):
 
     def format_task_item(i, t):
         if isinstance(t, dict):
+            normalized = _coerce_robot_task_to_assembly(t, i + 1)
             return (
-                f"Task {t.get('task_id', i+1)}: "
-                f"required_class={t.get('required_class')} "
-                f"target_pose={t.get('target_pose')} "
-                f"target_level={t.get('target_level')} "
-                f"depends_on={t.get('depends_on', [])} "
-                f"selection_rule={t.get('selection_rule')}"
+                f"Task {normalized.get('task_id', i+1)}: "
+                f"required_class={normalized.get('required_class')} "
+                f"target_pose={normalized.get('target_pose')} "
+                f"target_level={normalized.get('target_level')} "
+                f"depends_on={normalized.get('depends_on', [])} "
+                f"selection_rule={normalized.get('selection_rule')}"
             )
         return str(t)
 
@@ -187,6 +229,7 @@ def task_validator_node(state: dict):
         else:
             feedback_text = "任务序列验证通过" if is_valid else ("; ".join(final_errors) if final_errors else "任务序列验证失败")
 
+        # 如果 tasks 是 RobotTask schema，也原样返回，供 planning_node/action_planner 使用
         final_task_sequence = tasks if is_valid else None
 
         return {

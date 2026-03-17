@@ -1,0 +1,1 @@
+/home/ytm/block_agent/devel/.private/blockkit/share/roseus/ros/blockkit/manifest.l

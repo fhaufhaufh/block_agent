@@ -1,0 +1,1 @@
+/home/ytm/block_agent/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_Lift_Speed.lisp

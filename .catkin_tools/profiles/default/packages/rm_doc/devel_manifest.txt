@@ -1,0 +1,4 @@
+rm_robot/rm_doc
+/home/ytm/block_agent/devel/.private/rm_doc/share/rm_doc/cmake/rm_docConfig.cmake /home/ytm/block_agent/devel/share/rm_doc/cmake/rm_docConfig.cmake
+/home/ytm/block_agent/devel/.private/rm_doc/share/rm_doc/cmake/rm_docConfig-version.cmake /home/ytm/block_agent/devel/share/rm_doc/cmake/rm_docConfig-version.cmake
+/home/ytm/block_agent/devel/.private/rm_doc/lib/pkgconfig/rm_doc.pc /home/ytm/block_agent/devel/lib/pkgconfig/rm_doc.pc

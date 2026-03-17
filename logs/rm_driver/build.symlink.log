@@ -1,0 +1,4 @@
+Symlinking /home/ytm/block_agent/devel/share/rm_driver/cmake/rm_driverConfig-version.cmake
+Symlinking /home/ytm/block_agent/devel/share/rm_driver/cmake/rm_driverConfig.cmake
+Symlinking /home/ytm/block_agent/devel/lib/pkgconfig/rm_driver.pc
+Symlinking /home/ytm/block_agent/devel/lib/rm_driver/rm_driver

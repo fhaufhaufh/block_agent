@@ -1,0 +1,1 @@
+/home/ytm/block_agent/devel/.private/move_base_msgs/share/move_base_msgs/msg/MoveBaseResult.msg

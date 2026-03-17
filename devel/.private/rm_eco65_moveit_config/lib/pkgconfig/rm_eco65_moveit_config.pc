@@ -1,0 +1,8 @@
+prefix=/home/ytm/block_agent/devel/.private/rm_eco65_moveit_config
+
+Name: rm_eco65_moveit_config
+Description: Description of rm_eco65_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

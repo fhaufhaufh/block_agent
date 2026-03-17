@@ -1,112 +1,247 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Block Planning ROS Node
-订阅：/vision/blocks_info
-发布：/planning/construction_plan
-"""
-import rospy
+
 import json
-import time
-import traceback
-from pprint import pformat
-from std_msgs.msg import String
-from block_building_agent.graph.builder import construction_app
+import os
 import sys
+import time
+import subprocess
+import importlib.util
+import rospy
+from std_msgs.msg import String
 
+from block_building_agent.graph.builder import construction_app
+from block_building_agent.state import create_initial_state
+from block_building_agent.agents.action_planner import action_planner_node
 
-def _red(text: str) -> str:
-    """Wrap text with ANSI red color for terminal output."""
-    return f"\x1b[31m{text}\x1b[0m"
-
-
-def log_error_red(msg: str, *args, **kwargs):
-    """
-    同时通过 rospy.logerr 记录错误（写入日志文件/rosout），
-    并以红色字体将错误信息打印到 stderr，方便终端查看。
-    """
-    rospy.logerr(msg, *args, **kwargs)
-    # 尝试将 msg 格式化后输出红色
+# 尽量兼容你当前环境中 ObjectInfo 的真实包名
+try:
+    from vi_grab.msg import ObjectInfo
+except Exception:
     try:
-        formatted = msg % args if args else msg
+        from blockkit.msg import ObjectInfo
     except Exception:
-        formatted = msg
-    print(_red(formatted), file=sys.stderr)
+        ObjectInfo = None
 
 
-class BlockPlanningNode:
+class PlanningNode:
     def __init__(self):
-        """Initialize ROS node, subscriber and publishers."""
-        rospy.init_node('block_planning_node', anonymous=True)
-        rospy.loginfo("Block Planning Node Started")
+        rospy.init_node("planning_node", anonymous=False)
 
-        # 如果没有外部视觉节点发布 /vision/blocks_info，也可以在启动后自动跑一次（走 img_ana）
-        # 默认 false，避免影响原有逻辑
-        self.auto_once = rospy.get_param('~auto_once', False)
+        # 参数
+        self.max_iterations = rospy.get_param("~max_iterations", 5)
+        self.task_max_iterations = rospy.get_param("~task_max_iterations", 3)
+        self.action_wait_timeout = rospy.get_param("~action_wait_timeout", 10.0)
+
+        # action_planner 相关参数
+        self.generated_action_script_path = rospy.get_param(
+            "~generated_action_script_path",
+            "//home/ytm/block_agent/src/block_building_agent/tool/action.py"
+        )
+
+        # 外部脚本路径：catch.py（提供 arm_ready_pose）
+        self.catch_py_path = rospy.get_param(
+            "~catch_py_path",
+            "/home/ytm/block_agent/src/blockkit/scripts/catch.py"
+        )
+        self.yolo_script_path = rospy.get_param(
+            "~yolo_script_path",
+            "/home/ytm/block_agent/src/blockkit/scripts/vi_catch_yolov11.py"
+        )
+
+        # 话题
+        self.plan_pub = rospy.Publisher("/construction_plan", String, queue_size=10)
+        self.task_pub = rospy.Publisher("/task_sequence", String, queue_size=10)
+        self.action_script_pub = rospy.Publisher("/generated_action_script_path", String, queue_size=10)
+
+        self.input_sub = rospy.Subscriber(
+            "/block_information",
+            String,
+            self.block_info_callback,
+            queue_size=1
+        )
+
+        # 订阅真实世界积木信息
+        self.latest_world_blocks = []
+        self._world_seen_once = False
+        if ObjectInfo is not None:
+            self.object_sub = rospy.Subscriber(
+                "/object_pose",
+                ObjectInfo,
+                self.object_pose_callback,
+                queue_size=50
+            )
+        else:
+            self.object_sub = None
+            rospy.logwarn("ObjectInfo message type import failed, action_planner will not receive /object_pose.")
+
+        rospy.loginfo("planning_node started, waiting for /block_information ...")
+
+        # 可选：启动后自动触发一次（不依赖 /block_information），用于走 img_ana
+        self.auto_once = rospy.get_param("~auto_once", False)
         self._auto_invoked = False
-        self.task_max_iterations = rospy.get_param('~task_max_iterations', 3)
-
-        # Subscriber for vision blocks info
-        rospy.Subscriber('/vision/blocks_info', String, self.vision_callback)
-
-        # Publisher for final construction plan
-        self.plan_pub = rospy.Publisher('/planning/construction_plan', String, queue_size=10)
-
-        # 保留原有功能：debug publisher
-        self.debug_pub = rospy.Publisher('/planning/debug', String, queue_size=1)
-
-        # 新增：发布最终任务序列，不影响原有计划发布逻辑
-        self.task_pub = rospy.Publisher('/planning/task_sequence', String, queue_size=10)
-
-        rospy.loginfo("Waiting for blocks info...")
+        self._yolo_process = None
         if self.auto_once:
-            rospy.loginfo("auto_once=true: will run img_ana once at startup using IMG_PATH from .env")
-
-        # 可选：自动触发一次（不依赖 /vision/blocks_info）
-        if self.auto_once:
+            rospy.loginfo("auto_once=true: will invoke planning pipeline once at startup (img_ana will generate input_blocks)")
             rospy.Timer(rospy.Duration(0.5), self._auto_invoke_once, oneshot=True)
 
     def _auto_invoke_once(self, _evt):
         if self._auto_invoked:
             return
         self._auto_invoked = True
-        rospy.loginfo("auto_once enabled: invoking planning pipeline without /vision/blocks_info (img_ana will generate input_blocks)")
-        self._invoke_pipeline(blocks_info=[])
-
-    def vision_callback(self, msg):
         try:
-            rospy.loginfo("Received blocks info")
-            try:
-                blocks_info = json.loads(msg.data) if msg and msg.data else []
-                if not isinstance(blocks_info, list):
-                    rospy.logwarn("/vision/blocks_info is not a JSON list; fallback to empty list to trigger img_ana")
-                    blocks_info = []
-            except Exception:
-                rospy.logwarn("Failed to parse /vision/blocks_info JSON; fallback to empty list to trigger img_ana")
-                blocks_info = []
+            state = create_initial_state(
+                input_blocks=[],
+                max_iterations=self.max_iterations,
+                task_max_iterations=self.task_max_iterations,
+            )
+            rospy.loginfo("auto_once: invoking construction_app...")
+            result = construction_app.invoke(state)
 
-            self._invoke_pipeline(blocks_info=blocks_info)
+            final_plan = result.get("final_plan") or result.get("current_plan") or []
+            plan_msg = String()
+            plan_msg.data = json.dumps(final_plan, ensure_ascii=False)
+            self.plan_pub.publish(plan_msg)
+            rospy.loginfo("auto_once: published construction plan")
+            rospy.loginfo("\n%s", self._format_plan(final_plan))
+
+            self._log_task_interaction_flow(result)
+
+            final_task_sequence = result.get("final_task_sequence") or []
+            if final_task_sequence:
+                task_msg = String()
+                task_msg.data = json.dumps(final_task_sequence, ensure_ascii=False)
+                self.task_pub.publish(task_msg)
+                rospy.loginfo("auto_once: published final task sequence topic: /task_sequence")
+                self._run_action_planner_flow(final_task_sequence)
+            else:
+                rospy.logwarn("auto_once: No final task sequence published because task stage did not pass validation.")
         except Exception as e:
-            log_error_red(f"Error during vision_callback: {e}")
-            tb = traceback.format_exc()
-            # 使用 log_error_red 将 traceback 也输出为红色（但 rospy.logerr 可能不支持多行，分开处理）
-            for line in tb.splitlines():
-                if line.strip():
-                    log_error_red(line)
-            # 也将错误发送到调试 topic 以便远程查看
-            try:
-                err = String()
-                payload = json.dumps({
-                    'error': str(e),
-                    'traceback': tb
-                }, ensure_ascii=False)
-                if len(payload) > 15000:
-                    payload = payload[:15000] + '...TRUNCATED...'
-                err.data = payload
-                self.debug_pub.publish(err)
-            except Exception:
-                rospy.logdebug("Failed to publish error payload to /planning/debug")
+            rospy.logerr(f"auto_once planning failed: {e}")
 
+    # =========================
+    # 数据解析
+    # =========================
+    def _parse_block_info(self, msg_data):
+        try:
+            data = json.loads(msg_data)
+            if isinstance(data, list):
+                return data
+            elif isinstance(data, dict) and "input_blocks" in data:
+                return data["input_blocks"]
+            else:
+                rospy.logwarn("Input JSON format not recognized, fallback to empty list.")
+                return []
+        except Exception as e:
+            rospy.logerr(f"Failed to parse block info JSON: {e}")
+            return []
+
+    # =========================
+    # 真实世界积木信息
+    # =========================
+    def object_pose_callback(self, msg):
+        """
+        收集 YOLO 发布的真实世界积木信息。
+        当前先做轻量缓存，不做复杂去重。
+        """
+        try:
+            block = {
+                "object_class": str(getattr(msg, "object_class", "")),
+                "x": float(getattr(msg, "x", 0.0)),
+                "y": float(getattr(msg, "y", 0.0)),
+                "z": float(getattr(msg, "z", 0.0)),
+                "angle": float(getattr(msg, "angle", 0.0)),
+                "stamp": time.time(),
+            }
+
+            self.latest_world_blocks.append(block)
+            # 只保留最近 50 条，避免无限增长
+            self.latest_world_blocks = self.latest_world_blocks[-50:]
+            self._world_seen_once = True
+        except Exception as e:
+            rospy.logwarn(f"Failed to cache /object_pose message: {e}")
+
+    def _wait_for_world_blocks(self, timeout_sec, min_blocks: int = 1):
+        """
+        等待来自 /object_pose 的真实世界积木信息。
+        - timeout_sec: 最大等待时间（秒）
+        - min_blocks: 最少需要收集的消息数量，达到后返回 True（即使尚未超时）
+
+        返回 True 当收集到至少 min_blocks 条消息，或 False 当超时。
+        """
+        start = time.time()
+        last_log = 0.0
+        while not rospy.is_shutdown():
+            if len(self.latest_world_blocks) >= min_blocks:
+                return True
+
+            now = time.time()
+            if now - last_log > 1.0:
+                rospy.loginfo("等待接收真实世界的积木信息")
+                last_log = now
+
+            if now - start >= timeout_sec:
+                return False
+            rospy.sleep(0.2)
+        return False
+
+    def _start_yolo_if_needed(self):
+        """
+        启动 YOLO 识别脚本。
+        若已经启动且未退出，则不重复启动。
+        """
+        try:
+            if self._yolo_process is not None and self._yolo_process.poll() is None:
+                rospy.loginfo("YOLO script is already running")
+                return
+
+            if not os.path.exists(self.yolo_script_path):
+                rospy.logwarn(f"YOLO script not found: {self.yolo_script_path}")
+                return
+
+            self._yolo_process = subprocess.Popen([sys.executable, self.yolo_script_path])
+            rospy.loginfo(f"Started YOLO script: {self.yolo_script_path}")
+        except Exception as e:
+            rospy.logwarn(f"Failed to start YOLO script: {e}")
+
+    def _move_arm_to_ready_pose(self):
+        """
+        调用 catch.py 中的 arm_ready_pose，让机械臂先到识别姿态。
+        """
+        try:
+            if not self.catch_py_path or not os.path.exists(self.catch_py_path):
+                rospy.logwarn(f"catch.py not found: {self.catch_py_path}")
+                return False
+
+            spec = importlib.util.spec_from_file_location("blockkit_catch", self.catch_py_path)
+            if spec is None or spec.loader is None:
+                rospy.logwarn(f"Failed to create import spec for catch.py: {self.catch_py_path}")
+                return False
+
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            arm_ready_pose = getattr(mod, "arm_ready_pose", None)
+            if not callable(arm_ready_pose):
+                rospy.logwarn(f"arm_ready_pose not found in catch.py: {self.catch_py_path}")
+                return False
+        except Exception as e:
+            rospy.logwarn(f"Failed to import arm_ready_pose from catch.py ({self.catch_py_path}): {e}")
+            return False
+
+        try:
+            ok = arm_ready_pose()
+            if ok:
+                rospy.loginfo("机械臂已到达识别姿态，开始等待真实世界积木信息")
+            else:
+                rospy.logwarn("arm_ready_pose 调用失败")
+            return ok
+        except Exception as e:
+            rospy.logwarn(f"arm_ready_pose execution failed: {e}")
+            return False
+
+    # =========================
+    # 格式化输出
+    # =========================
     def _format_plan(self, plan):
         if not plan:
             return "[]"
@@ -122,71 +257,77 @@ class BlockPlanningNode:
         return "\n".join(lines)
 
     def _format_task_sequence(self, tasks):
-        """
-        兼容新旧两种 task 结构：
-        - 旧结构：step/action/class_type/target_position/target_posture
-        - 新结构：task_id/required_class/target_pose/selection_rule
-        """
         if not tasks:
             return "[]"
 
         lines = []
         for i, task in enumerate(tasks):
-            if not isinstance(task, dict):
-                lines.append(str(task))
-                continue
+            lines.append(
+                f"[{i}] step={task.get('step')}, "
+                f"action={task.get('action')}, "
+                f"class_type={task.get('class_type')}, "
+                f"target_level={task.get('target_level')}, "
+                f"target_position={task.get('target_position')}, "
+                f"target_posture={task.get('target_posture')}, "
+                f"depends_on={task.get('depends_on', [])}"
+                + (
+                    f", object_index={task.get('object_index')}, "
+                    f"stage_in_object={task.get('stage_in_object')}"
+                    if "object_index" in task or "stage_in_object" in task
+                    else ""
+                )
+            )
+        return "\n".join(lines)
 
-            if 'task_id' in task or 'required_class' in task or 'target_pose' in task:
-                lines.append(
-                    f"[{i}] task_id={task.get('task_id')}, "
-                    f"required_class={task.get('required_class')}, "
-                    f"target_pose={task.get('target_pose')}, "
-                    f"target_level={task.get('target_level')}, "
-                    f"depends_on={task.get('depends_on', [])}, "
-                    f"selection_rule={task.get('selection_rule')}"
-                )
-            else:
-                lines.append(
-                    f"[{i}] step={task.get('step')}, "
-                    f"action={task.get('action')}, "
-                    f"class_type={task.get('class_type')}, "
-                    f"target_level={task.get('target_level')}, "
-                    f"target_position={task.get('target_position')}, "
-                    f"target_posture={task.get('target_posture')}, "
-                    f"depends_on={task.get('depends_on', [])}"
-                    + (
-                        f", object_index={task.get('object_index')}, "
-                        f"stage_in_object={task.get('stage_in_object')}"
-                        if 'object_index' in task or 'stage_in_object' in task
-                        else ""
-                    )
-                )
+    def _format_world_blocks(self, blocks):
+        if not blocks:
+            return "[]"
+
+        lines = []
+        for i, b in enumerate(blocks):
+            lines.append(
+                f"[{i}] object_class={b.get('object_class')}, "
+                f"x={b.get('x')}, y={b.get('y')}, z={b.get('z')}, angle={b.get('angle', 0.0)}"
+            )
+        return "\n".join(lines)
+
+    def _format_action_sequence(self, actions):
+        if not actions:
+            return "[]"
+
+        lines = []
+        for i, a in enumerate(actions):
+            lines.append(
+                f"[{i}] step={a.get('step')}, "
+                f"action_type={a.get('action_type')}, "
+                f"source_class={a.get('source_class')}, "
+                f"source_pose={a.get('source_pose')}, "
+                f"target_place={a.get('target_place')}, "
+                f"comment={a.get('comment')}"
+            )
         return "\n".join(lines)
 
     def _log_task_interaction_flow(self, result_state):
-        """
-        保留之前新增的输出逻辑，在 Published construction plan 后面继续输出 task 流程。
-        """
-        final_plan = result_state.get('final_plan') or result_state.get('current_plan') or []
-        current_task_sequence = result_state.get('current_task_sequence') or []
-        final_task_sequence = result_state.get('final_task_sequence') or []
-        task_feedback = result_state.get('task_validation_feedback', '')
-        task_is_valid = result_state.get('task_is_valid', False)
-        task_iteration_count = result_state.get('task_iteration_count', 0)
-        task_errors = result_state.get('task_validation_errors', []) or []
+        final_plan = result_state.get("final_plan") or result_state.get("current_plan") or []
+        current_task_sequence = result_state.get("current_task_sequence") or []
+        final_task_sequence = result_state.get("final_task_sequence") or []
+        task_feedback = result_state.get("task_validation_feedback", "")
+        task_is_valid = result_state.get("task_is_valid", False)
+        task_iteration_count = result_state.get("task_iteration_count", 0)
 
         rospy.loginfo("========== task planning stage ==========")
+
         rospy.loginfo("接收到搭建计划")
         rospy.loginfo("\n%s", self._format_plan(final_plan))
+
         rospy.loginfo("task_advisor 开始分析")
+
         rospy.loginfo("将任务计划发给 task_validator")
         rospy.loginfo("\n%s", self._format_task_sequence(current_task_sequence))
 
         if task_iteration_count > 0:
             rospy.loginfo("task_validator 反馈回 task_advisor")
             rospy.loginfo("%s", task_feedback if task_feedback else "无反馈")
-            if task_errors:
-                rospy.loginfo("task_validator errors: %s", task_errors)
         else:
             rospy.loginfo("task_validator 尚未返回反馈")
 
@@ -201,217 +342,113 @@ class BlockPlanningNode:
 
         rospy.loginfo("========== end of task planning stage ==========")
 
-    def _invoke_pipeline(self, blocks_info):
-        """Invoke LangGraph pipeline and publish plan/debug."""
-        rospy.loginfo("Starting LangGraph invocation...")
+    def _run_action_planner_flow(self, final_task_sequence):
+        """
+        在 task 阶段之后追加 action_planner 流程：
+        - 接收任务序列
+        - 调用 arm_ready_pose
+        - 启动 YOLO
+        - 等待真实世界积木信息
+        - 调用 action_planner 生成动作序列与脚本文件
+        """
+        rospy.loginfo("========== action planning stage ==========")
 
-        inputs = {
-            "input_blocks": blocks_info,
-            "iteration_count": 0,
-            "max_iterations": 3,
-            # 新增 task 阶段初始字段；不影响原有 build 逻辑
-            "task_iteration_count": 0,
-            "task_max_iterations": self.task_max_iterations,
-            "current_task_sequence": [],
-            "final_task_sequence": None,
-            "task_is_valid": False,
-            "task_validation_feedback": "",
-            "task_validation_errors": [],
+        rospy.loginfo("接收到 task_advisor 输出的任务序列，开始发送给 action_planner")
+        rospy.loginfo("\n%s", self._format_task_sequence(final_task_sequence))
+
+        # 先到识别姿态
+        self._move_arm_to_ready_pose()
+
+        # 启动 YOLO
+        self._start_yolo_if_needed()
+
+        # 清空旧缓存，等待本轮识别
+        self.latest_world_blocks = []
+        self._world_seen_once = False
+
+        # 等待至少 3 条识别消息，以便 action_planner 有更多世界信息可用
+        got_world = self._wait_for_world_blocks(self.action_wait_timeout, min_blocks=3)
+        if not got_world:
+            rospy.logwarn("等待超时：未接收到来自 YOLO 的真实世界积木信息")
+            rospy.loginfo("========== end of action planning stage ==========")
+            return
+
+        rospy.loginfo("已经接收到真实世界的积木信息，开始规划动作序列")
+        rospy.loginfo("\n%s", self._format_world_blocks(self.latest_world_blocks))
+
+        action_state = {
+            "final_task_sequence": final_task_sequence,
+            "real_blocks_info": self.latest_world_blocks,
+            "generated_action_script_path": self.generated_action_script_path,
         }
-        rospy.logdebug(f"Invocation inputs: {pformat(inputs)}")
-
-        start = time.time()
-        result = construction_app.invoke(inputs)
-        duration = time.time() - start
-        rospy.loginfo(f"LangGraph invocation finished in {duration:.3f}s")
-
-        # 尝试把返回值序列化为 JSON 友好格式用于日志与发布
-        def safe_serialize(obj):
-            try:
-                return json.loads(json.dumps(obj, default=str, ensure_ascii=False))
-            except Exception:
-                try:
-                    return str(obj)
-                except Exception:
-                    return repr(obj)
 
         try:
-            serial_result = safe_serialize(result)
-        except Exception:
-            serial_result = str(result)
+            result = action_planner_node(action_state)
+            action_feedback = result.get("action_planner_feedback", "")
+            action_sequence = result.get("final_action_sequence") or result.get("current_action_sequence") or []
+            script_path = result.get("generated_action_script_path")
 
-        # DEBUG: log the full serialized result to help trace missing fields
-        try:
-            full_json = json.dumps(serial_result, ensure_ascii=False)
-            rospy.logdebug(f"Raw result: {pformat(serial_result)}")
-            print(f"[planning_node] full_result={full_json}")
-            try:
-                sys.stdout.flush()
-            except Exception:
-                pass
-        except Exception:
-            rospy.logdebug(f"Raw result (non-serializable): {pformat(serial_result)}")
+            rospy.loginfo("action_planner 反馈：%s", action_feedback if action_feedback else "无反馈")
+            rospy.loginfo("输出动作序列")
+            rospy.loginfo("\n%s", self._format_action_sequence(action_sequence))
 
-        plan_data = None
-        try:
-            if isinstance(result, dict):
-                plan_data = result.get('final_plan') or result.get('current_plan') or []
-                messages = result.get('messages')
-                is_valid = result.get('is_valid')
-                validation_feedback = result.get('build_validation_feedback') or result.get('validation_feedback') or result.get('build_advisor_feedback')
-                validation_errors = result.get('build_validation_errors') or result.get('validation_errors')
-            else:
-                get = getattr(result, 'get', None)
-                if callable(get):
-                    plan_data = result.get('final_plan') or result.get('current_plan') or []
-                    messages = result.get('messages')
-                    is_valid = result.get('is_valid')
-                    validation_feedback = result.get('build_validation_feedback') or result.get('validation_feedback') or result.get('build_advisor_feedback')
-                    validation_errors = result.get('build_validation_errors') or result.get('validation_errors')
-                else:
-                    plan_data = getattr(result, 'final_plan', None) or getattr(result, 'current_plan', None) or []
-                    messages = getattr(result, 'messages', None)
-                    is_valid = getattr(result, 'is_valid', None)
-                    validation_feedback = getattr(result, 'build_validation_feedback', None) or getattr(result, 'validation_feedback', None) or getattr(result, 'build_advisor_feedback', None)
-                    validation_errors = getattr(result, 'build_validation_errors', None) or getattr(result, 'validation_errors', None)
+            if script_path:
+                rospy.loginfo("已生成可调用脚本文件：%s", script_path)
+                msg = String()
+                msg.data = script_path
+                self.action_script_pub.publish(msg)
         except Exception as e:
-            rospy.logwarn(f"Failed to extract standard fields from result: {e}")
-            plan_data = []
-            messages = None
-            is_valid = None
-            validation_feedback = None
-            validation_errors = None
+            rospy.logerr(f"action_planner failed: {e}")
 
-        if messages:
-            try:
-                rospy.loginfo(f"Result contains {len(messages)} message(s)")
-                for i, m in enumerate(messages):
-                    try:
-                        if isinstance(m, dict):
-                            role = m.get('role')
-                            status = m.get('status')
-                        else:
-                            role = getattr(m, 'role', None)
-                            status = getattr(m, 'status', None)
-                        rospy.loginfo(f"Message[{i}] role={role} status={status}")
-                    except Exception:
-                        rospy.logdebug(f"Cannot parse message[{i}]")
-            except Exception:
-                rospy.logdebug("Failed to iterate messages for summarized logging")
+        rospy.loginfo("========== end of action planning stage ==========")
 
-        rospy.loginfo(f"Validation: is_valid={is_valid} feedback={validation_feedback}")
+    # =========================
+    # 回调主流程
+    # =========================
+    def block_info_callback(self, msg):
+        rospy.loginfo("Received /block_information")
+
+        input_blocks = self._parse_block_info(msg.data)
+
+        state = create_initial_state(
+            input_blocks=input_blocks,
+            max_iterations=self.max_iterations,
+            task_max_iterations=self.task_max_iterations
+        )
 
         try:
-            # 尝试提取 input_blocks（若 img_ana 生成）以便调试与发布
-            input_blocks = []
-            try:
-                if isinstance(serial_result, dict):
-                    input_blocks = serial_result.get('input_blocks', []) or []
-                else:
-                    get = getattr(result, 'get', None)
-                    if callable(get):
-                        input_blocks = result.get('input_blocks', []) or []
-                    else:
-                        input_blocks = getattr(result, 'input_blocks', None) or []
-            except Exception:
-                input_blocks = []
+            result = construction_app.invoke(state)
 
-            # 准备调试结构，包含 input_blocks 的精简序列化（避免超长）
-            dbg_blocks = None
-            try:
-                dbg_blocks = json.loads(json.dumps(input_blocks, default=str, ensure_ascii=False))
-            except Exception:
-                try:
-                    dbg_blocks = str(input_blocks)
-                except Exception:
-                    dbg_blocks = None
+            final_plan = result.get("final_plan") or result.get("current_plan") or []
+            plan_msg = String()
+            plan_msg.data = json.dumps(final_plan, ensure_ascii=False)
+            self.plan_pub.publish(plan_msg)
 
-            debug_msg = String()
-            debug_struct = {
-                'is_valid': is_valid,
-                'validation_feedback': validation_feedback,
-                'messages_count': len(messages) if messages else 0,
-                'input_blocks_count': len(dbg_blocks) if isinstance(dbg_blocks, list) else (0 if dbg_blocks is None else 1),
-            }
-            # 将较小的 input_blocks 直接嵌入调试负载（长度受限）
-            try:
-                debug_struct['input_blocks'] = dbg_blocks
-            except Exception:
-                pass
+            rospy.loginfo("published construction plan")
+            rospy.loginfo("\n%s", self._format_plan(final_plan))
 
-            debug_payload = json.dumps(debug_struct, ensure_ascii=False)
-            if len(debug_payload) > 20000:
-                debug_payload = debug_payload[:20000] + '...TRUNCATED...'
-            debug_msg.data = debug_payload
-            self.debug_pub.publish(debug_msg)
+            # 保留你原来的 task 阶段输出逻辑
+            self._log_task_interaction_flow(result)
 
-            # 也把 input_blocks 输出到 stdout，便于直接在终端查看
-            try:
-                print(f"[planning_node] input_blocks={json.dumps(dbg_blocks, ensure_ascii=False)}")
-                try:
-                    sys.stdout.flush()
-                except Exception:
-                    pass
-            except Exception:
-                try:
-                    print(f"[planning_node] input_blocks={dbg_blocks}")
-                    try:
-                        sys.stdout.flush()
-                    except Exception:
-                        pass
-                except Exception:
-                    pass
-
-        except Exception:
-            rospy.logdebug("Failed to publish debug payload")
-
-        plan_data = plan_data or []
-        rospy.loginfo(f"Plan data (len={len(plan_data)}): {pformat(plan_data)}")
-
-        # 保留原有功能：发布 construction plan
-        plan_msg = String()
-        plan_msg.data = json.dumps(plan_data, ensure_ascii=False)
-        self.plan_pub.publish(plan_msg)
-        rospy.loginfo("Published construction plan")
-
-        # 在原有输出后追加 task 阶段日志与发布，不删除原逻辑
-        try:
-            task_sequence = []
-            if isinstance(result, dict):
-                task_sequence = result.get('final_task_sequence') or result.get('current_task_sequence') or []
-            else:
-                get = getattr(result, 'get', None)
-                if callable(get):
-                    task_sequence = result.get('final_task_sequence') or result.get('current_task_sequence') or []
-                else:
-                    task_sequence = getattr(result, 'final_task_sequence', None) or getattr(result, 'current_task_sequence', None) or []
-
-            self._log_task_interaction_flow(result if isinstance(result, dict) else serial_result if isinstance(serial_result, dict) else {})
-
-            if task_sequence:
+            final_task_sequence = result.get("final_task_sequence") or []
+            if final_task_sequence:
                 task_msg = String()
-                task_msg.data = json.dumps(task_sequence, ensure_ascii=False)
+                task_msg.data = json.dumps(final_task_sequence, ensure_ascii=False)
                 self.task_pub.publish(task_msg)
-                rospy.loginfo("Published task sequence")
+                rospy.loginfo("published final task sequence topic: /task_sequence")
+
+                # 新增：task 之后进入 action_planner 阶段
+                self._run_action_planner_flow(final_task_sequence)
+            else:
+                rospy.logwarn("No final task sequence published because task stage did not pass validation.")
+
         except Exception as e:
-            rospy.logwarn(f"Failed to log/publish task sequence: {e}")
-
-    def run(self):
-        rospy.spin()
+            rospy.logerr(f"Planning failed: {e}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
-        node = BlockPlanningNode()
-        node.run()
+        PlanningNode()
+        rospy.spin()
     except rospy.ROSInterruptException:
         pass
-    except Exception as e:
-        log_error_red(f"Fatal: {e}")
-        # print fatal error in red to stderr
-        try:
-            print(_red(f"Fatal: {e}"), file=sys.stderr)
-        except Exception:
-            pass
-        import sys
-        sys.exit(1)

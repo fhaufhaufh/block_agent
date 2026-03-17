@@ -1,0 +1,1 @@
+/home/ytm/block_agent/devel/.private/rm_65_moveit_config/lib/pkgconfig/rm_65_moveit_config.pc

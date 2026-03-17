@@ -21,3 +21,6 @@ build_validator_llm = llm
 # task 阶段 Agent 使用的模型
 task_advisor_llm = llm
 task_validator_llm = llm
+
+# action阶段使用的模型
+action_planner_llm = llm

@@ -1,0 +1,1 @@
+/home/ytm/block_agent/devel/.private/rm_gazebo/lib/pkgconfig/rm_gazebo.pc

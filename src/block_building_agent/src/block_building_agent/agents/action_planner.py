@@ -8,12 +8,7 @@ import json
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# 尽量复用你现有配置；如果没有专门 action_planner_llm，就回退到 task_advisor_llm
-try:
-    from block_building_agent.config import action_planner_llm as planner_llm
-except Exception:
-    from block_building_agent.config import task_advisor_llm as planner_llm
-
+from block_building_agent.config import action_planner_llm as planner_llm
 
 class ActionStepItem(BaseModel):
     step: int = Field(description="动作步骤编号，从 1 开始连续递增")

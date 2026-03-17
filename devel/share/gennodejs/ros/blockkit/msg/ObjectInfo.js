@@ -1,0 +1,1 @@
+/home/ytm/block_agent/devel/.private/blockkit/share/gennodejs/ros/blockkit/msg/ObjectInfo.js
